@@ -6,17 +6,21 @@ import img3 from '../img/hiw-3.jpg'
 import img4 from '../img/img-600x400-4.jpg'
 import img5 from '../img/img-600x400-5.jpg'
 import img6 from '../img/img-600x400-6.jpg'
+import Aos from "aos";
+import "aos/dist/aos.css";
 function Services() {
-
+    useEffect(() => {
+        Aos.init({ duration: 2000 });
+      }, []);
   return (
     <div className="container-xxl py-5">
-        <div className="container">
+        <div className="container" data-aos="fade-up" data-aos-duration="4500">
             <div className="text-center mx-auto mb-5 wow fadeInUp" data-wow-delay="0.1s" style={{"maxWidth":"600px"}}>
                 <h6 className="text-primary">Why Droit Energy</h6>
                 <h1 className="mb-4">A sustainable energy solution widely accessible across globe </h1>
             </div>
             <div className="row g-4">
-                <div className="col-md-6 col-lg-4 wow fadeInUp" data-wow-delay="0.1s">
+                <div className="col-md-6 col-lg-4 wow fadeInUp" data-wow-delay="0.1s"  data-aos="fade-left" data-aos-duration="4500">
                     <div className="service-item rounded overflow-hidden">
                         <img className="img-fluid" src={img1} alt="" />
                         <div className="position-relative p-4 pt-0">
@@ -44,7 +48,7 @@ function Services() {
                         </div>
                     </div>
                 </div>
-                <div className="col-md-6 col-lg-4 wow fadeInUp" data-wow-delay="0.5s">
+                <div className="col-md-6 col-lg-4 wow fadeInUp" data-wow-delay="0.5s"  data-aos="fade-right" data-aos-duration="4500">
                     <div className="service-item rounded overflow-hidden">
                         <img className="img-fluid" src={img3} alt="" />
                         <div className="position-relative p-4 pt-0">

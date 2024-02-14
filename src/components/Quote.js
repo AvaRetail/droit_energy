@@ -2,19 +2,23 @@
 
 import React, {useEffect} from "react";
 import img1 from '../img/quote.jpg'
+import Aos from "aos";
+import "aos/dist/aos.css";
 // import './Navbar.css';
 function Quote() {
-
+    useEffect(() => {
+        Aos.init({ duration: 2000 });
+      }, []);
   return (
     <div className="container-fluid bg-light overflow-hidden my-5 px-lg-0">
-    <div className="container quote px-lg-0">
+    <div className="container quote px-lg-0"  data-aos="fade-down" data-aos-duration="4500">
         <div className="row g-0 mx-lg-0">
-            <div className="col-lg-6 ps-lg-0 wow fadeIn" data-wow-delay="0.1s" style={{minHeight: "400px"}}>
+            <div className="col-lg-6 ps-lg-0 wow fadeIn" data-wow-delay="0.1s" style={{minHeight: "400px"}}  data-aos="fade-right" data-aos-duration="4500">
                 <div className="position-relative h-100">
                     <img className="position-absolute img-fluid w-100 h-100" src={img1} style={{objectFit: "cover"}} alt="" />
                 </div>
             </div>
-            <div className="col-lg-6 quote-text py-5 wow fadeIn" data-wow-delay="0.5s">
+            <div className="col-lg-6 quote-text py-5 wow fadeIn" data-wow-delay="0.5s"  data-aos="fade-left" data-aos-duration="4500">
                 <div className="p-lg-5 pe-lg-0">
                     <h6 className="text-primary">Contact Us</h6>
                     <h1 className="mb-4">Partner with us</h1>

@@ -7,11 +7,15 @@ import img3 from '../img/gallery-3.jpg'
 import img4 from '../img/gallery-4.jpg'
 import img5 from '../img/gallery-5.jpg'
 import img6 from '../img/gallery-6.jpg'
+import Aos from "aos";
+import "aos/dist/aos.css";
 // import './Navbar.css';
 function Footer() {
-
+    useEffect(() => {
+        Aos.init({ duration: 2000 });
+      }, []);
   return (
-    <div className="container-fluid bg-dark text-body footer mt-5 pt-5 wow fadeIn" data-wow-delay="0.1s">
+    <div className="container-fluid bg-dark text-body footer mt-5 pt-5 wow fadeIn" data-wow-delay="0.1s"  data-aos="fade-down" data-aos-duration="4500">
         <div className="container py-5">
             <div className="row g-5">
                 <div className="col-lg-3 col-md-6">
@@ -59,7 +63,7 @@ function Footer() {
                 </div>
                 <div className="col-lg-3 col-md-6">
                     <h5 className="text-white mb-4">Contact Us</h5>
-                    <p>Dolor amet sit justo amet elitr clita ipsum elitr est.</p>
+                    {/* <p>Dolor amet sit justo amet elitr clita ipsum elitr est.</p> */}
                     <div className="position-relative mx-auto" style={{maxWidth: "400px"}}>
                         <input className="form-control border-0 w-100 py-3 ps-4 pe-5" type="text" placeholder="Your email" />
                         <button type="button" className="btn btn-primary py-2 position-absolute top-0 end-0 mt-2 me-2">Send</button>
