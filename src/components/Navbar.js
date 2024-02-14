@@ -15,9 +15,9 @@ function Navbar() {
         <div className="collapse navbar-collapse" id="navbarCollapse">
             <div className="navbar-nav ms-auto p-4 p-lg-0">
                 {/* <a href="index.html" className="nav-item nav-link active">Home</a> */}
-                <a href="about.html" className="nav-item nav-link">About</a>
-                <a href="service.html" className="nav-item nav-link">Service</a>
-                <a href="service.html" className="nav-item nav-link">How It Works</a>
+                <a href="" className="nav-item nav-link">About</a>
+                <a href="" className="nav-item nav-link">Service</a>
+                <a href="" className="nav-item nav-link">How It Works</a>
                 {/* <a href="project.html" className="nav-item nav-link">Project</a> */}
                 {/* <div className="nav-item dropdown">
                     <a href="#" className="nav-link dropdown-toggle" data-bs-toggle="dropdown">Pages</a>
@@ -29,7 +29,7 @@ function Navbar() {
                         <a href="404.html" className="dropdown-item">404 Page</a>
                     </div>
                 </div> */}
-                <a href="contact.html" className="nav-item nav-link">Why Us</a>
+                <a href="" className="nav-item nav-link">Why Us</a>
             </div>
             <a href="" className="btn btn-primary rounded-0 py-4 px-lg-5 d-none d-lg-block">Contact Us<i className="fa fa-arrow-right ms-3"></i></a>
         </div>

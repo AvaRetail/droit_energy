@@ -18,7 +18,7 @@ function Footer() {
                     <h5 className="text-white mb-4">Address</h5>
                     <p className="mb-2"><i className="fa fa-map-marker-alt me-3"></i>123 Street, New York, USA</p>
                     <p className="mb-2"><i className="fa fa-phone-alt me-3"></i>+012 345 67890</p>
-                    <p className="mb-2"><i className="fa fa-envelope me-3"></i>info@example.com</p>
+                    <p className="mb-2"><i className="fa fa-envelope me-3"></i>info@droitenergy.com</p>
                     <div className="d-flex pt-2">
                         <a className="btn btn-square btn-outline-light btn-social" href=""><i className="fab fa-twitter"></i></a>
                         <a className="btn btn-square btn-outline-light btn-social" href=""><i className="fab fa-facebook-f"></i></a>
@@ -29,9 +29,9 @@ function Footer() {
                 <div className="col-lg-3 col-md-6">
                     <h5 className="text-white mb-4">Quick Links</h5>
                     <a className="btn btn-link" href="">About Us</a>
-                    <a className="btn btn-link" href="">Contact Us</a>
-                    <a className="btn btn-link" href="">Our Services</a>
-                    <a className="btn btn-link" href="">Terms & Condition</a>
+                    <a className="btn btn-link" href="">Service</a>
+                    <a className="btn btn-link" href="">How it works</a>
+                    <a className="btn btn-link" href="">Why us</a>
                     <a className="btn btn-link" href="">Support</a>
                 </div>
                 <div className="col-lg-3 col-md-6">
@@ -58,11 +58,11 @@ function Footer() {
                     </div>
                 </div>
                 <div className="col-lg-3 col-md-6">
-                    <h5 className="text-white mb-4">Newsletter</h5>
+                    <h5 className="text-white mb-4">Contact Us</h5>
                     <p>Dolor amet sit justo amet elitr clita ipsum elitr est.</p>
-                    <div className="position-relative mx-auto" style={{"maxWidth": "400px"}}>
+                    <div className="position-relative mx-auto" style={{maxWidth: "400px"}}>
                         <input className="form-control border-0 w-100 py-3 ps-4 pe-5" type="text" placeholder="Your email" />
-                        <button type="button" className="btn btn-primary py-2 position-absolute top-0 end-0 mt-2 me-2">SignUp</button>
+                        <button type="button" className="btn btn-primary py-2 position-absolute top-0 end-0 mt-2 me-2">Send</button>
                     </div>
                 </div>
             </div>
@@ -73,12 +73,12 @@ function Footer() {
                     <div className="col-md-6 text-center text-md-start mb-3 mb-md-0">
                         &copy; <a href="#">Droit Energy</a>, All Right Reserved.
                     </div>
-                    <div className="col-md-6 text-center text-md-end">
+                    {/* <div className="col-md-6 text-center text-md-end">
                         
                         Designed By 
                         <a href="https://htmlcodex.com">HTML Codex</a>
                         <br />Distributed By: <a href="https://themewagon.com" target="_blank">ThemeWagon</a>
-                    </div>
+                    </div> */}
                 </div>
             </div>
         </div>

@@ -3,6 +3,9 @@ import React, {useEffect} from "react";
 import img1 from '../img/l1.jpg'
 import img2 from '../img/l2.jpg'
 import img3 from '../img/l3.jpg'
+import background from '../video/back.mp4';
+import background1 from '../video/back1.mp4';
+import background3 from '../video/back3.mp4';
 
 // import { Link } from "react-scroll";
 // import './Navbar.css';
@@ -12,7 +15,13 @@ function Carousel() {
     <div className="container-fluid p-0 pb-5 wow fadeIn" data-wow-delay="0.1s">
     <div className="owl-carousel header-carousel position-relative">
         <div className="owl-carousel-item position-relative" data-dot="<img src={img1}>">
-            <img className="img-fluid" src={img2} alt="" />
+            {/* <img className="img-fluid" src={img2} alt="" /> */}
+            <div className="header-container" >
+                <video autoPlay loop muted className='background-video'  data-aos="fade-up" data-aos-duration="4500">
+                    <source src={background} type="video/mp4" />
+                    Your browser does not support the video tag.
+                </video>
+            </div>
             <div className="owl-carousel-inner">
                 <div className="container">
                     <div className="row justify-content-start">
@@ -23,7 +32,7 @@ Preserving the Planet</h1>
                             <p className="fs-5 fw-medium text-white mb-4 pb-3">Our mission is to utilize advancements in geoscience
 to expedite the shift towards clean energy by delivering affordable
 and dependable geothermal power solution</p>
-                            <a href="" className="btn btn-primary rounded-pill py-3 px-5 animated slideInLeft">Read More</a>
+                            {/* <a href="" className="btn btn-primary rounded-pill py-3 px-5 animated slideInLeft">Read More</a> */}
                         </div>
                     </div>
                 </div>
