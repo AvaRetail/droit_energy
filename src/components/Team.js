@@ -19,7 +19,7 @@ function Team() {
                 <h1 className="mb-4">Experienced Team Members</h1>
             </div>
             <div className="row g-4">
-                <div className="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s"  data-aos="fade-left" data-aos-duration="4500">
+                <div className="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s"  data-aos="fade-down" data-aos-duration="4500">
                     <div className="team-item rounded overflow-hidden">
                         <div className="d-flex">
                             <img className="img-fluid w-75" src={img1} alt="" />
@@ -51,7 +51,7 @@ function Team() {
                         </div>
                     </div>
                 </div>
-                <div className="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.5s"  data-aos="fade-right" data-aos-duration="4500">
+                <div className="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.5s"  data-aos="fade-up" data-aos-duration="4500">
                     <div className="team-item rounded overflow-hidden">
                         <div className="d-flex">
                             <img className="img-fluid w-75" src={img3} alt="" />

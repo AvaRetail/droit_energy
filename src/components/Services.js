@@ -20,7 +20,7 @@ function Services() {
                 <h1 className="mb-4">A sustainable energy solution widely accessible across globe </h1>
             </div>
             <div className="row g-4">
-                <div className="col-md-6 col-lg-4 wow fadeInUp" data-wow-delay="0.1s"  data-aos="fade-left" data-aos-duration="4500">
+                <div className="col-md-6 col-lg-4 wow fadeInUp" data-wow-delay="0.1s"  data-aos="fade-down" data-aos-duration="4500">
                     <div className="service-item rounded overflow-hidden">
                         <img className="img-fluid" src={img1} alt="" />
                         <div className="position-relative p-4 pt-0">
@@ -48,7 +48,7 @@ function Services() {
                         </div>
                     </div>
                 </div>
-                <div className="col-md-6 col-lg-4 wow fadeInUp" data-wow-delay="0.5s"  data-aos="fade-right" data-aos-duration="4500">
+                <div className="col-md-6 col-lg-4 wow fadeInUp" data-wow-delay="0.5s"  data-aos="fade-up" data-aos-duration="4500">
                     <div className="service-item rounded overflow-hidden">
                         <img className="img-fluid" src={img3} alt="" />
                         <div className="position-relative p-4 pt-0">
