@@ -7,6 +7,7 @@ import img3 from '../img/gallery-3.jpg'
 import img4 from '../img/gallery-4.jpg'
 import img5 from '../img/gallery-5.jpg'
 import img6 from '../img/gallery-6.jpg'
+import logo from '../img/logo.png'
 import Aos from "aos";
 import "aos/dist/aos.css";
 // import './Navbar.css';
@@ -74,8 +75,11 @@ function Footer() {
         <div className="container">
             <div className="copyright">
                 <div className="row">
-                    <div className="col-md-6 text-center text-md-start mb-3 mb-md-0">
+                    {/* <div className="col-md-6 text-center text-md-start mb-3 mb-md-0">
                         &copy; <a href="#">Droit Energy</a>, All Right Reserved.
+                    </div> */}
+                    <div className="col-md-6 text-center text-md-start mb-3 mb-md-0">
+                        &copy; <img src="../img/logo.png" width="250" height="100"/>, All Right Reserved.
                     </div>
                     {/* <div className="col-md-6 text-center text-md-end">
                         
