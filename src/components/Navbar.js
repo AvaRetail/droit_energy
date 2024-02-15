@@ -11,7 +11,9 @@ function Navbar() {
   return (
     <nav className="navbar navbar-expand-lg bg-white navbar-light sticky-top p-0" data-aos="fade-down" data-aos-duration="4500">
         <a href="index.html" className="navbar-brand d-flex align-items-center border-end px-4 px-lg-5">
-            <h2 className="m-0 text-primary">Droit Energy</h2>
+            {/* <h2 className="m-0 text-primary">Droit Energy</h2> */}
+            <img src="../img/logo.png"/>
+
         </a>
         <button type="button" className="navbar-toggler me-4" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
             <span className="navbar-toggler-icon"></span>
