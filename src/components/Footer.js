@@ -1,12 +1,10 @@
 
 
 import React, {useEffect} from "react";
-import img1 from '../img/gallery-1.jpg'
-import img2 from '../img/gallery-2.jpg'
-import img3 from '../img/gallery-3.jpg'
-import img4 from '../img/gallery-4.jpg'
-import img5 from '../img/gallery-5.jpg'
-import img6 from '../img/gallery-6.jpg'
+import img1 from '../img/hiw-1.jpg'
+import img2 from '../img/hiw-2.jpg'
+import img3 from '../img/hiw-3.jpg'
+import { Link } from "react-scroll";
 import Aos from "aos";
 import "aos/dist/aos.css";
 // import './Navbar.css';
@@ -22,7 +20,7 @@ function Footer() {
                     <h5 className="text-white mb-4">Address</h5>
                     <p className="mb-2"><i className="fa fa-map-marker-alt me-3"></i>123 Street, New York, USA</p>
                     <p className="mb-2"><i className="fa fa-phone-alt me-3"></i>+012 345 67890</p>
-                    <p className="mb-2"><i className="fa fa-envelope me-3"></i>info@droitenergy.com</p>
+                    <p className="mb-2"><i className="fa fa-envelope me-3"></i>contact@droit.energy</p>
                     <div className="d-flex pt-2">
                         <a className="btn btn-square btn-outline-light btn-social" href=""><i className="fab fa-twitter"></i></a>
                         <a className="btn btn-square btn-outline-light btn-social" href=""><i className="fab fa-facebook-f"></i></a>
@@ -32,11 +30,73 @@ function Footer() {
                 </div>
                 <div className="col-lg-3 col-md-6">
                     <h5 className="text-white mb-4">Quick Links</h5>
-                    <a className="btn btn-link" href="">About Us</a>
+                    {/* <a className="btn btn-link" href="">About Us</a>
                     <a className="btn btn-link" href="">Service</a>
                     <a className="btn btn-link" href="">How it works</a>
                     <a className="btn btn-link" href="">Why us</a>
-                    <a className="btn btn-link" href="">Support</a>
+                    <a className="btn btn-link" href="">Support</a> */}
+<Link
+                className="btn btn-link"
+                to="top"
+                spy={true}
+                smooth={true}
+                duration={50}
+                style={{cursor: "pointer"}}
+              >
+                Home
+              </Link>
+<Link
+                className="btn btn-link"
+                to="about"
+                spy={true}
+                smooth={true}
+                duration={50}
+                style={{cursor: "pointer"}}
+              >
+                About
+              </Link>
+              <Link
+                className="btn btn-link"
+                to="featurewhy"
+                spy={true}
+                smooth={true}
+                duration={50}
+                style={{cursor: "pointer"}}
+              >
+                How It Works
+              </Link>
+              <Link
+                className="btn btn-link"
+                to="services"
+                spy={true}
+                smooth={true}
+                duration={50}
+                style={{cursor: "pointer"}}
+              >
+                Why Us
+              </Link>
+
+              <Link
+                className="btn btn-link"
+                to="team"
+                spy={true}
+                smooth={true}
+                duration={50}
+                style={{cursor: "pointer"}}
+              >
+                Team
+              </Link>
+              <Link
+                className="btn btn-link"
+                to="quote"
+                spy={true}
+                smooth={true}
+                duration={50}
+                style={{cursor: "pointer"}}
+              >
+                Contact
+              </Link>
+
                 </div>
                 <div className="col-lg-3 col-md-6">
                     <h5 className="text-white mb-4">Project Gallery</h5>
@@ -51,13 +111,13 @@ function Footer() {
                             <img className="img-fluid rounded" src={img3} alt=""/>
                         </div>
                         <div className="col-4">
-                            <img className="img-fluid rounded" src={img4} alt=""/>
+                            <img className="img-fluid rounded" src={img1} alt=""/>
                         </div>
                         <div className="col-4">
-                            <img className="img-fluid rounded" src={img5} alt=""/>
+                            <img className="img-fluid rounded" src={img2} alt=""/>
                         </div>
                         <div className="col-4">
-                            <img className="img-fluid rounded" src={img6} alt=""/>
+                            <img className="img-fluid rounded" src={img3} alt=""/>
                         </div>
                     </div>
                 </div>

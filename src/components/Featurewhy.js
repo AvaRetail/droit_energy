@@ -12,7 +12,7 @@ function Featurewhy() {
         Aos.init({ duration: 2000 });
       }, []);
   return (
-    <div className="container-fluid bg-light overflow-hidden my-5 px-lg-0"  data-aos="fade-down" data-aos-duration="4500">
+    <div id="featurewhy" className="container-fluid bg-light overflow-hidden my-5 px-lg-0"  data-aos="fade-down" data-aos-duration="4500">
         <div className="container feature px-lg-0">
             <div className="row g-0 mx-lg-0">
                 <div className="col-lg-6 feature-text py-5 wow fadeIn" data-wow-delay="0.1s">

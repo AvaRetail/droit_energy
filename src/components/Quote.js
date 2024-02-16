@@ -1,7 +1,7 @@
 
 
 import React, {useEffect} from "react";
-import img1 from '../img/quote.jpg'
+import img1 from '../img/partner.jpg'
 import Aos from "aos";
 import "aos/dist/aos.css";
 // import './Navbar.css';

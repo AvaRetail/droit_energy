@@ -12,6 +12,7 @@ import Quote from './components/Quote';
 import Team from './components/Team';
 import Testimonial from './components/Testimonial';
 import Footer from './components/Footer';
+import { ScrollProvider } from 'react-scroll';
 // import './lib/owlcarousel/assets/owl.carousel.min.css'
 
 function App() {

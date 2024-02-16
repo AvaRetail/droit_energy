@@ -297,13 +297,13 @@
   }
 
   .feature-text  {
-      padding-left: calc(((100% - 960px) / 2) + .75rem);
+      padding-left: calc(((100% - 960px) / 2) + .75rem) !important;
   }
 }
 
 @media (min-width: 1200px) {
   .feature-text  {
-      padding-left: calc(((100% - 1140px) / 2) + .75rem);
+      padding-left: calc(((100% - 1140px) / 2) + .75rem) !important;
   }
 }
 
