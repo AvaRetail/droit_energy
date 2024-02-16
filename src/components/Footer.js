@@ -8,6 +8,7 @@ import img4 from '../img/gallery-4.jpg'
 import img5 from '../img/gallery-5.jpg'
 import img6 from '../img/gallery-6.jpg'
 import logo from '../img/logo.png'
+import { Link } from "react-scroll";
 import Aos from "aos";
 import "aos/dist/aos.css";
 // import './Navbar.css';
