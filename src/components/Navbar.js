@@ -2,28 +2,20 @@
 import React, {useEffect} from "react";
 import Aos from "aos";
 import "aos/dist/aos.css";
- import { Link } from "react-scroll";
- import { ScrollProvider } from 'react-scroll';
+import logo from "../img/logo.png"
+// import { Link } from "react-scroll";
 // import './Navbar.css';
 function Navbar() {
     useEffect(() => {
         Aos.init({ duration: 2000 });
       }, []);
   return (
-    <nav className="navbar navbar-expand-lg bg-white navbar-light sticky-top p-0">
-        {/* <a href="index.html" className="navbar-brand d-flex align-items-center border-end px-4 px-lg-5">
-            <h2 className="m-0 text-primary">Droit Energy</h2>
-        </a> */}
-         <Link
-                className="navbar-brand d-flex align-items-center border-end px-4 px-lg-5"
-                to="navbar"
-                spy={true}
-                smooth={true}
-                duration={50}
-                style={{cursor: "pointer"}}
-              >
-                 <h2 className="m-0 text-primary">Droit Energy</h2>
-              </Link>
+    <nav className="navbar navbar-expand-lg bg-white navbar-light sticky-top p-0" data-aos="fade-down" data-aos-duration="4500">
+        <a href="index.html" className="navbar-brand d-flex align-items-center border-end px-4 px-lg-5">
+            {/* <h2 className="m-0 text-primary">Droit Energy</h2> */}
+            <img src={logo} height="75px" width="185"/>
+
+        </a>
         <button type="button" className="navbar-toggler me-4" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
             <span className="navbar-toggler-icon"></span>
         </button>
