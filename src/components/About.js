@@ -4,6 +4,7 @@ import React, {useEffect} from "react";
 import about from '../img/about-us.png'
 import Aos from "aos";
 import "aos/dist/aos.css";
+import { Link } from "react-scroll";
 // import './Navbar.css';
 function About() {
     useEffect(() => {
@@ -23,13 +24,23 @@ function About() {
                 <div className="col-lg-6 about-text py-5 wow fadeIn" data-wow-delay="0.5s" data-aos="fade-down" data-aos-duration="4500">
                     <div className="p-lg-5 pe-lg-0">
                         <h6 className="text-primary">About Us</h6>
-                        <h1 className="mb-4">Unlock the Power of<br/> Geothermal Energy with DROIT </h1>
+                        <h1 className="mb-4">What’s Geothermal Energy</h1>
                         {/* <p>Tap into the Earth's Hidden Energy </p> */}
                         {/* <h4>Tap into the Earth's Hidden Energy </h4> */}
-                        <p><i className="fa fa-check-circle text-primary me-3"></i>At DROIT, we harness the incredible potential of geothermal energy - a renewable energy source <br />that taps into the Earth's natural heat. </p>
-                        <p><i className="fa fa-check-circle text-primary me-3"></i>By drilling at the right depths, we unlock abundant heat energy that can power turbines and generate electricity, <br />all while leaving zero carbon footprint. </p>
+                        <p><i className="fa fa-check-circle text-primary me-3"></i>Geothermal energy is the Earth's internal heat energy stored beneath its surface. This incredible resource originates from the Earth's formation and the decay of radioactive isotopes. As we tap into this vast reservoir, we unlock a renewable and clean source of power that stands out in the crowded energy landscape. (re write this).  </p>
+                        <p><i className="fa fa-check-circle text-primary me-3"></i>At DROIT, we harness the incredible potential of geothermal energy - a renewable energy source that taps into the Earth's natural heat. By drilling at the right depths, we unlock abundant heat energy that can power turbines and generate electricity, all while leaving zero carbon footprint. </p>
                         {/* <p><i className="fa fa-check-circle text-primary me-3"></i>Tempor erat elitr rebum at clita</p> */}
-                        <a href="" className="btn btn-primary rounded-pill py-3 px-5 mt-3">Explore More</a>
+                        {/* <a href="" className="btn btn-primary rounded-pill py-3 px-5 mt-3">Read More</a> */}
+                        <Link
+                                    className="btn btn-primary rounded-pill py-3 px-5 mt-3"
+                                    to="featurewhy"
+                                    spy={true}
+                                    smooth={true}
+                                    duration={500}
+                                    style={{cursor: "pointer"}}
+                                >
+                                    Read More
+                                </Link>
                     </div>
                 </div>
             </div>

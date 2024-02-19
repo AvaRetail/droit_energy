@@ -131,6 +131,58 @@
   margin-left: 8px;
 }
 
+
+/* lets make earth cleaner */
+.cleaner_section{
+
+  /* padding-top: 0px !important; */
+  /* padding-bottom: 0px !important; */
+  
+  padding-bottom: 0px !important;
+  background-color: #f8f9fa !important;
+  
+  padding-top: 4.375rem;
+  padding-bottom: 4.25rem !important;
+}
+
+.cleaner-h2{
+  text-align: center;
+  color: #9B9B9B;
+  font-size: 45px;
+  font-weight: normal;
+}
+.cleaner-p{
+  align-items: center;
+  padding-bottom: 1.75rem;
+  text-align: center;
+  font-size: 1rem;
+  color: #9B9B9B;
+}
+.cleaner-btn{
+  /* background-color: white !important;
+  align-items: center !important;
+  text-align: center !important;
+  justify-content: center !important;
+  display: flow !important;
+  color: black !important;
+  width:50%;
+  float: inline-start; */
+  cursor: pointer;
+    display: grid;
+    align-items:flex-start;
+    width: 30%;
+    margin-left: 34%;
+}
+.cleaner-btn:hover{
+  color: #0d5f56;
+}
+
+/* end of lets make earth cleaner */
+/* mission section */
+.mission-section{
+  background-color: #FFFFFF !important;
+}
+/* end mission section */
 @media (max-width: 991.98px) {
   .navbar .navbar-nav .nav-link  {
       margin-right: 0;
@@ -143,6 +195,79 @@
 }
 
 @media (min-width: 992px) {
+  .dropdown-menu {
+    display: none;
+    position: absolute;
+    top: calc(100% + 1px);
+    left: 0;
+    z-index: 1000;
+    min-width: 10rem;
+    padding: 0.5rem 0;
+    margin: 0.125rem 0 0;
+    font-size: 1rem;
+    color: #212529;
+    text-align: left;
+    list-style: none;
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 1px solid rgba(0,0,0,.15);
+    border-radius: .25rem;
+    animation: fadeIn 0.5s;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.dropdown-menu.show {
+    display: block;
+}
+
+.dropdown-menu a {
+    display: block;
+    padding: 0.5rem 1rem;
+    clear: both;
+    font-weight: 400;
+    color: #212529;
+    text-align: inherit;
+    white-space: nowrap;
+    background-color: transparent;
+    border: 0;
+    transition: background-color 0.3s;
+}
+
+.dropdown-menu a:hover,
+.dropdown-menu a:focus {
+    text-decoration: none;
+    background-color: #f8f9fa;
+}
+.dropdown-menu li {
+  border-bottom: 1px solid #dee2e6; /* Add border between items */
+}
+
+.dropdown-menu li:last-child {
+  border-bottom: none; /* Remove border for last item */
+}
+
+.dropdown-menu li a {
+  padding: 0.75rem 1rem; /* Add padding to the items */
+  color: #212529;
+  display: block;
+  transition: background-color 0.3s;
+}
+
+.dropdown-menu li a:hover,
+.dropdown-menu li a:focus {
+  background-color: #f8f9fa; /* Change background color on hover/focus */
+}
+
   .navbar .nav-item .dropdown-menu {
       display: block;
       border: none;
@@ -159,6 +284,8 @@
       transition: .5s;
       opacity: 1;
   }
+
+  
 }
 
 

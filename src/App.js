@@ -13,6 +13,9 @@ import Team from './components/Team';
 import Testimonial from './components/Testimonial';
 import Footer from './components/Footer';
 import { ScrollProvider } from 'react-scroll';
+import Whydroit from './components/Whydroit';
+import Cleaner from './components/Cleaner';
+import Mission from './components/Mission';
 // import './lib/owlcarousel/assets/owl.carousel.min.css'
 
 function App() {
@@ -23,9 +26,12 @@ function App() {
   <Carousel />
   {/* <Feature /> */}
   <About />
-  <Services />
   <Featurewhy />
-  <Team />
+  <Cleaner />
+  <Services />
+  {/* <Team /> */}
+  <Whydroit />
+  <Mission />
   {/* <Projects /> */}
   <Quote />
   {/* <Testimonial /> */}

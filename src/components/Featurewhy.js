@@ -18,8 +18,8 @@ function Featurewhy() {
                 <div className="col-lg-6 feature-text py-5 wow fadeIn" data-wow-delay="0.1s">
                     <div className="p-lg-5 ps-lg-0"  data-aos="fade-down" data-aos-duration="4500">
                         <h6 className="text-primary">How It Works!</h6>
-                        <h1 className="mb-4">Revealing Earth's Power: The Basics of Geothermal Energy</h1>
-                        <p className="mb-4 pb-2"><i className="fa fa-check-circle text-primary me-3"></i>Welcome to the future of sustainable energy – where we harness the Earth's own warmth to power our world. Let's delve into the fundamentals of geothermal energy and discover how this natural marvel is revolutionizing the way we generate power</p>
+                        {/* <h1 className="mb-4">Revealing Earth's Power: The Basics of Geothermal Energy</h1> */}
+                        <p className="mb-4 pb-2"><i className="fa fa-check-circle text-primary me-3"></i>The process of harnessing geothermal energy begins by drilling deep into the Earth’s crust. The Earth’s interior, at these depths, is hotter than the surface, and this heat can be captured through wells. Water is then circulated through these wells, turning into steam as it encounters the intense heat. This steam is what drives turbines, generating electricity.</p>
                         <p className="mb-4 pb-2"><i className="fa fa-check-circle text-primary me-3"></i>Unlike some other renewable sources, geothermal energy is a consistent, 24/7 power supply – it's not dependent on weather conditions or time of day. In essence, geothermal energy is a clean, reliable, and sustainable power source that harnesses the Earth's natural heat. </p>
                         {/* By utilizing this incredible force, we're not just providing energy for today; we're investing in a greener, more sustainable tomorrow</p> */}
                         {/* <div className="row g-4">

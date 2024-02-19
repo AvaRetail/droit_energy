@@ -6,13 +6,25 @@ import img3 from '../img/l3.jpg'
 import background from '../video/back.mp4';
 import background1 from '../video/back1.mp4';
 import background3 from '../video/back3.mp4';
-
+import { useSpring, animated } from 'react-spring';
+import { Link } from "react-scroll";
 // import { Link } from "react-scroll";
 // import './Navbar.css';
 function Carousel() {
 
+    // Define animation properties using useSpring hook
+    // const props = useSpring({
+    //     from: { transform: 'rotate(-45deg)' },
+    //     to: { transform: 'rotate(0deg)' },
+    //     config: { duration: 300 }
+    //   });
+    const props = useSpring({
+        from: { opacity: 0, transform: 'translateX(100%)' },
+        to: { opacity: 1, transform: 'translateX(0)' },
+        config: { duration: 1000 }
+      });
   return (
-    <div id="carousel" className="container-fluid p-0 pb-5 wow fadeIn" data-wow-delay="0.1s">
+    <div id="carousel" className="container-fluid p-0 pb-5 wow fadeIn" data-wow-delay="0.1s" style={props}>
     <div className="owl-carousel header-carousel position-relative">
         <div className="owl-carousel-item position-relative" data-dot="<img src={img1}>">
             {/* <img className="img-fluid" src={img2} alt="" /> */}
@@ -23,19 +35,29 @@ function Carousel() {
                 </video>
             </div>
             <div className="owl-carousel-inner">
-                <div className="container">
+                <animated.div className="container" style={props}>
                     <div className="row justify-content-start">
                         <div className="col-10 col-lg-8">
                             <h1 className="display-2 text-white animated slideInDown">
-Powering Progress
-Preserving the Planet</h1>
-                            <p className="fs-5 fw-medium text-white mb-4 pb-3">Our mission is to utilize advancements in geoscience
-to expedite the shift towards clean energy by delivering affordable
-and dependable geothermal power solution</p>
-                            {/* <a href="" className="btn btn-primary rounded-pill py-3 px-5 animated slideInLeft">Read More</a> */}
+                                Powering Progress
+                                Preserving the Planet</h1>
+                            <p className="fs-5 fw-medium text-white mb-4 pb-3">Our mission is to utilize advancements in geoscience to expedite the 
+                            shift towards clean energy by delivering affordable and dependable geothermal power solutions. </p>
+                            {/* <a href="" className="btn btn-primary rounded-pill py-3 px-5 animated slideInLeft">About Us</a> */}
+                            <Link
+                                    className="btn btn-primary rounded-pill py-3 px-5 animated slideInLeft"
+                                    to="about"
+                                    spy={true}
+                                    smooth={true}
+                                    duration={500}
+                                    style={{cursor: "pointer"}}
+                                >
+                                    About Us
+                                </Link>
+                            {/* <a href="" className="btn btn-outline-success rounded-pill py-3 px-5" style={{background:"white"}}>Contact Us</a> */}
                         </div>
                     </div>
-                </div>
+                </animated.div>
             </div>
         </div>
         {/* <div className="owl-carousel-item position-relative" data-dot="<img src='img/carousel-2.jpg'>">

@@ -16,8 +16,8 @@ function Services() {
     <div id="services" className="container-xxl py-5">
         <div className="container" data-aos="fade-up" data-aos-duration="4500">
             <div className="text-center mx-auto mb-5 wow fadeInUp" data-wow-delay="0.1s" style={{"maxWidth":"600px"}}>
-                <h6 className="text-primary">Why Droit Energy</h6>
-                <h1 className="mb-4">A sustainable energy solution widely accessible across globe </h1>
+                <h6 className="text-primary">Why Geothermal Energy</h6>
+                <h2 className="mb-4">A sustainable energy solution, widely accessible in close proximity to every community and industrial hub across the globe </h2>
             </div>
             <div className="row g-4">
                 <div className="col-md-6 col-lg-4 wow fadeInUp" data-wow-delay="0.1s"  data-aos="fade-down" data-aos-duration="4500">
@@ -28,7 +28,7 @@ function Services() {
                                 <i className="fa fa-solid fa-seedling fa-3x"></i>
                             </div>
                             <h4 className="mb-3">A Sustainable Solution</h4>
-                            <p>We are committed to creating a sustainable future by providing highly space-efficient and affordable energy sources. With our team of experts and trusted partner companies, we are dedicated to building a network of geothermal energy plants across India.</p>
+                            <p>Leveraging geothermal resources, we spearhead a shift towards sustainable energy, democratizing access to clean power worldwide. Committed to securing a brighter, greener future, we deliver dependable, eco-friendly solutions. Our endeavor isn’t just about innovation; it’s a dedication to ensuring a sustainable legacy for generations to come.</p>
                             {/* <a className="small fw-medium" href="">Read More<i className="fa fa-arrow-right ms-2"></i></a> */}
                         </div>
                     </div>
@@ -41,7 +41,7 @@ function Services() {
                                 <i className="fa fa-solid fa-bolt fa-3x"></i>
                             </div>
                             <h4 className="mb-3">Clean Energy for All </h4>
-                            <p>By harnessing geothermal energy, we offer a clean and reliable alternative to traditional energy sources. Our mission is to make clean energy accessible to everyone, ensuring a brighter and more sustainable future for generations to come. 
+                            <p>Harnessing geothermal energy, we revolutionize energy production, providing a sustainable alternative for all. Our commitment extends beyond mere innovation; it’s a pledge to empower communities worldwide with accessible, reliable clean energy. Together, we forge a brighter, greener future, ensuring prosperity for generations to come. 
 
 </p>
                             {/* <a className="small fw-medium" href="">Read More<i className="fa fa-arrow-right ms-2"></i></a> */}
@@ -56,7 +56,7 @@ function Services() {
                                 <i class="fa fa-solid fa-lightbulb fa-3x"></i>
                             </div>
                             <h4 className="mb-3">Thinking Beyond Business</h4>
-                            <p>We are committed to creating a positive impact on society and aligning our efforts with the United Nations' Sustainable Development Goals. By investing in geothermal energy, we are actively working towards achieving goals such as affordable and clean energy.</p>
+                            <p>Our dedication to societal betterment drives us to align with the UN’s Sustainable Development Goals. Through geothermal energy investments, we progress towards SDG 7, ensuring affordable, clean energy, and SDG 13, combating climate change. Together, we propel a sustainable future, making a tangible difference for global prosperity.</p>
                             {/* <a className="small fw-medium" href="">Read More<i className="fa fa-arrow-right ms-2"></i></a> */}
                         </div>
                     </div>
