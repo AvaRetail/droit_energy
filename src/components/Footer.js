@@ -8,6 +8,7 @@ import img4 from '../img/gallery-4.jpg'
 import img5 from '../img/gallery-5.jpg'
 import img6 from '../img/gallery-6.jpg'
 import logo from '../img/logo.png'
+// import logo from '../img/1.png'
 import { Link } from "react-scroll";
 
 
@@ -19,39 +20,39 @@ function Footer() {
         Aos.init({ duration: 2000 });
       }, []);
   return (
-    <div className="container-fluid bg-dark text-body footer mt-5 pt-5 wow fadeIn" data-wow-delay="0.1s"  data-aos="fade-down" data-aos-duration="4500">
+    <div className="container-fluid text-body footer mt-5 pt-5 wow fadeIn footer-section" data-wow-delay="0.1s"  data-aos="fade-down" data-aos-duration="4500">
         <div className="container py-5">
             <div className="row g-5">
                 <div className="col-lg-4 col-md-6">
                     <h5 className="text-white mb-4">Address</h5>
-                    <div className="mb-2">
+                    <div className="mb-2 text-white">
                             <p><i className="fa fa-globe me-3"></i>India</p>
                             <p><i className="fa fa-map-marker-alt me-3"></i>Near Udhna Darwaja, behind Reliance mall, Surat, Gujarat, India. 395002.</p>
                             <p><i className="fa fa-phone-alt me-3"></i>(+91) 89288 62707 (WhatsApp)</p>
                         </div>
 
                         <hr />
-                        <div>
-                            <p><i className="fa fa-globe me-3"></i>USA</p>
+                        <div className="text-white">
+                            <p><i className="fa fa-globe me-3"></ i>USA</p>
                             <p><i className="fa fa-map-marker-alt me-3"></i>3280 B street suite C, Auburn, WA 98001.</p>
                             <p><i className="fa fa-phone-alt me-3"></i>(+1) 425 522 4037</p>
                         </div>
                         <hr />
-                    <p className="mb-2"><i className="fa fa-envelope me-3"></i>contact@droit.energy</p>
-                    <div className="d-flex pt-2">
-                        <a className="btn btn-square btn-outline-light btn-social" href=""><i className="fab fa-twitter"></i></a>
-                        <a className="btn btn-square btn-outline-light btn-social" href=""><i className="fab fa-facebook-f"></i></a>
-                        <a className="btn btn-square btn-outline-light btn-social" href=""><i className="fab fa-youtube"></i></a>
-                        <a className="btn btn-square btn-outline-light btn-social" href=""><i className="fab fa-linkedin-in"></i></a>
+                    <p className="mb-2 text-white"><i className="fa fa-envelope me-3"></i>contact@droit.energy</p>
+                    <div className="d-flex pt-2 text-white">
+                        <a className="btn btn-square btn-outline-light btn-social text-white" href=""><i className="fab fa-twitter"></i></a>
+                        <a className="btn btn-square btn-outline-light btn-social text-white" href=""><i className="fab fa-facebook-f"></i></a>
+                        <a className="btn btn-square btn-outline-light btn-social text-white" href=""><i className="fab fa-youtube"></i></a>
+                        <a className="btn btn-square btn-outline-light btn-social text-white" href=""><i className="fab fa-linkedin-in"></i></a>
                     </div>
                 </div>
                 <div className="col-lg-4 col-md-6">
                     {/* <h5 className="text-white mb-4">Quick Links</h5> */}
-                    <img src={logo} height="75px" width="185"/>
+                    <img src={logo} height="auto" width="100%"/>
 
                     <br />
                     <br />
-                    <p>Partner with us in our mission to create a cleaner and more sustainable India. Together, we can make a difference -one geothermal project at a time. Contact us now to learn more about how you can be part of the renewable energy revolution with DROIT. </p>
+                    <p className="text-white">Partner with us in our mission to create a cleaner and more sustainable India. Together, we can make a difference -one geothermal project at a time. Contact us now to learn more about how you can be part of the renewable energy revolution with DROIT. </p>
                     {/* <a className="btn btn-link" href="">About Us</a>
                     <a className="btn btn-link" href="">Service</a>
                     <a className="btn btn-link" href="">How it works</a>
@@ -156,8 +157,8 @@ function Footer() {
         <div className="container">
             <div className="copyright">
                 <div className="row">
-                    <div className="col-md-6 text-center text-md-start mb-3 mb-md-0">
-                        &copy; <a href="#">Droit Energy</a>, All Right Reserved.
+                    <div className="col-md-6 text-center text-white text-md-start mb-3 mb-md-0">
+                        &copy; <a href="#" className="text-white">Droit Energy</a>, All Right Reserved.
                     </div>
                     {/* <div className="col-md-6 text-center text-md-start mb-3 mb-md-0">
                         &copy; <img src="../img/logo.png" width="250" height="100"/>, All Right Reserved.

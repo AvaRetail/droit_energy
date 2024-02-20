@@ -1,8 +1,8 @@
 /********** Template CSS **********/
 :root {
-    --primary: #32C36C;
+    --primary: #0d5f56;
     --light: #F6F7F8;
-    --dark: #1A2A36;
+    --dark: #ed2121;
 }
 
 .fw-medium {
@@ -46,11 +46,18 @@
     font-weight: 500;
     transition: .5s;
 }
-
+.btn:hover{
+    background-color: #ed2121 !important;
+    border-color:  #ed2121 !important;
+    color: #FFFFFF !important ;
+}
 .btn.btn-primary,
 .btn.btn-outline-primary:hover {
     color: #FFFFFF;
 }
+.btn.btn-outline-primary:hover{
+    background-color: #ed2121 !important;
+  }
 
 .btn-square {
     width: 38px;

@@ -12,7 +12,7 @@ function Featurewhy() {
         Aos.init({ duration: 2000 });
       }, []);
   return (
-    <div id="featurewhy" className="container-fluid bg-light overflow-hidden my-5 px-lg-0"  data-aos="fade-down" data-aos-duration="4500">
+    <div id="featurewhy" className="container-fluid bg-light overflow-hidden my-5 px-lg-2"  data-aos="fade-down" data-aos-duration="4500">
         <div className="container feature px-lg-0">
             <div className="row g-0 mx-lg-0">
                 <div className="col-lg-6 feature-text py-5 wow fadeIn" data-wow-delay="0.1s">
@@ -73,7 +73,8 @@ function Featurewhy() {
                 <div className="col-lg-6 pe-lg-0 wow fadeIn" data-wow-delay="0.5s" style={{minHeight: "400px"}}  data-aos="fade-up" data-aos-duration="4500">
                     <div className="position-relative h-100">
                         {/* <img className="position-absolute img-fluid w-100 h-100" src={img1} style={{"objectFit": "cover;"}} alt="" /> */}
-                        <iframe className="img-fluid w-100 h-100" style={{objectFit: "cover"}} src="https://www.youtube.com/embed/j7q653ffQO4?si=IYzTJmQE1fi_hkhA" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"></iframe>
+                        {/* <iframe className="img-fluid w-100 h-100" style={{objectFit: "cover"}} src="https://www.youtube.com/embed/j7q653ffQO4?si=IYzTJmQE1fi_hkhA" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"></iframe> */}
+                        <iframe className="img-fluid w-100 h-100" style={{objectFit: "cover"}}  src="https://www.youtube.com/embed/iBrSU22d0sI?si=F9kErI3FThJhgopb" title="Droit Energy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"></iframe>
                     </div>
                 </div>
             </div>

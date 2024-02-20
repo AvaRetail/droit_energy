@@ -22,13 +22,13 @@ function Mission() {
                         {/* <iframe className="img-fluid w-100 h-100" style={{objectFit: "cover;"}} src="https://www.youtube.com/embed/j7q653ffQO4?si=IYzTJmQE1fi_hkhA" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"></iframe> */}
                         <h6 className="text-primary">Our Mission</h6>
 
-                        <p>We aim to expedite the clean energy transition in India through innovative<br /> applications in geoscience, ensuring the provision of cost-effective and<br /> dependable geothermal energy</p>
+                        <p><i className="fa fa-check-circle text-primary me-3"></i>We aim to expedite the clean energy transition in India through innovative<br /> applications in geoscience, ensuring the provision of cost-effective and<br /> dependable geothermal energy</p>
                     </div>
                 </div>
                 <div className="col-lg-6 about-text fadeIn" data-aos="fade-down" data-aos-duration="4500">
                     <div className="pe-lg-0">
                         
-                        <p className="mb-4">The emerging geothermal industry of the next generation continues to present significant opportunities for cost reduction through technological innovation and learning curves. With innovation implemented, robust commercial demand, increasing policy support, and optimistic cost-reduction projections, there are no obstacles preventing the dawn of a new era in geothermal energy.</p>
+                        <p className="mb-4"><i className="fa fa-check-circle text-primary me-3"></i>The emerging geothermal industry of the next generation continues to present significant opportunities for cost reduction through technological innovation and learning curves. With innovation implemented, robust commercial demand, increasing policy support, and optimistic cost-reduction projections, there are no obstacles preventing the dawn of a new era in geothermal energy.</p>
                         
                     </div>
                 </div>

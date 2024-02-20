@@ -10,16 +10,11 @@ function Quote() {
         Aos.init({ duration: 2000 });
       }, []);
   return (
-    <div className="container-fluid bg-light overflow-hidden my-5 px-lg-0">
+    <div className="container-fluid bg-light overflow-hidden my-5 px-lg-2">
     <div className="container quote px-lg-0"  data-aos="fade-down" data-aos-duration="4500">
         <div className="row g-0 mx-lg-0">
-            <div className="col-lg-6 ps-lg-0 wow fadeIn" data-wow-delay="0.1s" style={{minHeight: "400px"}}  data-aos="fade-up" data-aos-duration="4500">
-                <div className="position-relative h-100">
-                    <img className="position-absolute img-fluid w-100 h-100" src={img1} style={{objectFit: "cover"}} alt="" />
-                </div>
-            </div>
-            <div className="col-lg-6 quote-text py-5 wow fadeIn" data-wow-delay="0.5s"  data-aos="fade-down" data-aos-duration="4500">
-                <div className="p-lg-5 pe-lg-0">
+        <div className="col-lg-6 quote-text py-5 wow fadeIn" data-wow-delay="0.5s"  data-aos="fade-down" data-aos-duration="4500">
+                <div className="p-lg-5">
                     <h6 className="text-primary">Contact Us</h6>
                     <h1 className="mb-4">Partner with us</h1>
                     <p className="mb-4 pb-2">Join us in our mission to create a cleaner and more sustainable India. Together, we can make a difference - one geothermal project at a time. Contact us now to learn more about how you can be part of the renewable energy revolution with DROIT. </p>
@@ -52,6 +47,12 @@ function Quote() {
                     </form>
                 </div>
             </div>
+            <div className="col-lg-6 ps-lg-0 wow fadeIn" data-wow-delay="0.1s" style={{minHeight: "400px"}}  data-aos="fade-up" data-aos-duration="4500">
+                <div className="position-relative h-100">
+                    <img className="position-absolute img-fluid w-100 h-100" src={img1} style={{objectFit: "cover"}} alt="" />
+                </div>
+            </div>
+           
         </div>
     </div>
 </div>

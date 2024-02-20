@@ -1,5 +1,4 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react';
 import Navbar from './components/Navbar';
 import Top from './components/Top';
 import Carousel from './components/Carousel';
@@ -12,31 +11,41 @@ import Quote from './components/Quote';
 import Team from './components/Team';
 import Testimonial from './components/Testimonial';
 import Footer from './components/Footer';
-import { ScrollProvider } from 'react-scroll';
+import { animateScroll as scroll } from 'react-scroll'; // Import animateScroll from react-scroll
 import Whydroit from './components/Whydroit';
 import Cleaner from './components/Cleaner';
 import Mission from './components/Mission';
-// import './lib/owlcarousel/assets/owl.carousel.min.css'
+import Whatwedo from './components/Whatwedo';
+import './App.css';
 
 function App() {
+  const scrollToTop = () => {
+    scroll.scrollToTop();
+  };
+
   return (
-  <>
-  <Top />
-  <Navbar />
-  <Carousel />
-  {/* <Feature /> */}
-  <About />
-  <Featurewhy />
-  <Cleaner />
-  <Services />
-  {/* <Team /> */}
-  <Whydroit />
-  <Mission />
-  {/* <Projects /> */}
-  <Quote />
-  {/* <Testimonial /> */}
-  <Footer />
-  </>
+    <div>
+       <Top />
+      <Navbar />
+      <Carousel />
+      {/* <Feature /> */}
+      <About />
+      <Featurewhy />
+      <Mission />
+      <Services />
+      <Whatwedo />
+      <Whydroit />
+      
+      <Cleaner />
+      {/* <Projects /> */}
+      <Quote />
+      {/* <Testimonial /> */}
+      <Footer />
+      {/* Back to Top Button */}
+      <button onClick={scrollToTop} className="btn btn-lg btn-primary btn-lg-square rounded-circle back-to-top">
+        <i className="bi bi-arrow-up"></i>
+      </button>
+    </div>
   );
 }
 

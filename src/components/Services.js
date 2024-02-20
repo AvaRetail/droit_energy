@@ -13,6 +13,7 @@ function Services() {
         Aos.init({ duration: 2000 });
       }, []);
   return (
+    <section className="cleaner_section">
     <div id="services" className="container-xxl py-5">
         <div className="container" data-aos="fade-up" data-aos-duration="4500">
             <div className="text-center mx-auto mb-5 wow fadeInUp" data-wow-delay="0.1s" style={{"maxWidth":"600px"}}>
@@ -53,7 +54,7 @@ function Services() {
                         <img className="img-fluid" src={img3} alt="" />
                         <div className="position-relative p-4 pt-0">
                             <div className="service-icon">
-                                <i class="fa fa-solid fa-lightbulb fa-3x"></i>
+                                <i className="fa fa-solid fa-lightbulb fa-3x"></i>
                             </div>
                             <h4 className="mb-3">Thinking Beyond Business</h4>
                             <p>Our dedication to societal betterment drives us to align with the UN’s Sustainable Development Goals. Through geothermal energy investments, we progress towards SDG 7, ensuring affordable, clean energy, and SDG 13, combating climate change. Together, we propel a sustainable future, making a tangible difference for global prosperity.</p>
@@ -103,6 +104,7 @@ function Services() {
             </div>
         </div>
     </div>
+    </section>
   );
 }
 export default Services;
