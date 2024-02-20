@@ -48,7 +48,7 @@ function Footer() {
                 </div>
                 <div className="col-lg-4 col-md-6">
                     {/* <h5 className="text-white mb-4">Quick Links</h5> */}
-                    <img src={logo} height="auto" width="100%"/>
+                    <img src={logo} height="auto" width="100%" style={{borderRadius:"1rem"}}/>
 
                     <br />
                     <br />
