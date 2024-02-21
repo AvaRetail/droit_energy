@@ -11,7 +11,7 @@ import img1 from '../img/img-600x400-1.jpg'
 function Projects() {
 
   return (
-    <div className="container-xxl py-5">
+    <div className="container-xxl py-2">
         <div className="container">
             <div className="text-center mx-auto mb-5 wow fadeInUp" data-wow-delay="0.1s" style={{"maxWidth": "600px"}}>
                 <h6 className="text-primary">Our Projects</h6>
@@ -38,7 +38,7 @@ function Projects() {
                     </div>
                     <div className="pt-3">
                         <p className="text-primary mb-0">Solar Panels</p>
-                        <hr className="text-primary w-25 my-2" />
+                        <hr className="text-primary w-25 my-3" />
                         <h5 className="lh-base">We Are pioneers of solar & renewable energy industry</h5>
                     </div>
                 </div>
@@ -52,7 +52,7 @@ function Projects() {
                     </div>
                     <div className="pt-3">
                         <p className="text-primary mb-0">Wind Turbines</p>
-                        <hr className="text-primary w-25 my-2" />
+                        <hr className="text-primary w-25 my-3" />
                         <h5 className="lh-base">We Are pioneers of solar & renewable energy industry</h5>
                     </div>
                 </div>
@@ -66,7 +66,7 @@ function Projects() {
                     </div>
                     <div className="pt-3">
                         <p className="text-primary mb-0">Hydropower Plants</p>
-                        <hr className="text-primary w-25 my-2"/>
+                        <hr className="text-primary w-25 my-3"/>
                         <h5 className="lh-base">We Are pioneers of solar & renewable energy industry</h5>
                     </div>
                 </div>
@@ -80,7 +80,7 @@ function Projects() {
                     </div>
                     <div className="pt-3">
                         <p className="text-primary mb-0">Solar Panels</p>
-                        <hr className="text-primary w-25 my-2"/>
+                        <hr className="text-primary w-25 my3"/>
                         <h5 className="lh-base">We Are pioneers of solar & renewable energy industry</h5>
                     </div>
                 </div>
@@ -94,7 +94,7 @@ function Projects() {
                     </div>
                     <div className="pt-3">
                         <p className="text-primary mb-0">Wind Turbines</p>
-                        <hr className="text-primary w-25 my-2"/>
+                        <hr className="text-primary w-25 my-3"/>
                         <h5 className="lh-base">We Are pioneers of solar & renewable energy industry</h5>
                     </div>
                 </div>
@@ -108,7 +108,7 @@ function Projects() {
                     </div>
                     <div className="pt-3">
                         <p className="text-primary mb-0">Hydropower Plants</p>
-                        <hr className="text-primary w-25 my-2" />
+                        <hr className="text-primary w-25 my-3" />
                         <h5 className="lh-base">We Are pioneers of solar & renewable energy industry</h5>
                     </div>
                 </div>

@@ -24,7 +24,7 @@ function Carousel() {
         config: { duration: 1000 }
       });
   return (
-    <div id="carousel" className="container-fluid p-0 pb-5 wow fadeIn" data-wow-delay="0.1s" style={props}>
+    <div id="carousel" className="container-fluid p-0 pb-1 wow fadeIn" data-wow-delay="0.1s" style={props}>
     <div className="owl-carousel header-carousel position-relative">
         <div className="owl-carousel-item position-relative" data-dot="<img src={img1}>">
             {/* <img className="img-fluid" src={img2} alt="" /> */}
@@ -44,7 +44,7 @@ function Carousel() {
                             <p className="fs-5 fw-medium text-white mb-4 pb-3">Our mission is to utilize advancements in geoscience to expedite the 
                             shift towards clean energy by delivering affordable and dependable geothermal power solutions. </p>
                             {/* <a href="" className="btn btn-primary rounded-pill py-3 px-5 animated slideInLeft">About Us</a> */}
-                            <Link
+                            {/* <Link
                                     className="btn btn-primary rounded-pill py-3 px-5 animated slideInLeft"
                                     to="about"
                                     spy={true}
@@ -53,7 +53,7 @@ function Carousel() {
                                     style={{cursor: "pointer"}}
                                 >
                                     About Us
-                                </Link>
+                                </Link> */}
                             {/* <a href="" className="btn btn-outline-success rounded-pill py-3 px-5" style={{background:"white"}}>Contact Us</a> */}
                         </div>
                     </div>

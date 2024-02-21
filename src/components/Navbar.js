@@ -8,6 +8,20 @@ import { useSpring, animated } from 'react-spring';
 // import { Link } from "react-scroll";
 // import './Navbar.css';
 function Navbar() {
+    // const [paddingClass, setPaddingClass] = useState('p-1');
+    // useLayoutEffect(() => {
+    //     function updatePaddingClass() {
+    //       const isMobile = window.innerWidth < 768; // Example threshold for mobile devices
+    //       setPaddingClass(isMobile ? 'p-2' : 'p-1');
+    //     }
+    
+    //     updatePaddingClass(); // Initial update
+    //     window.addEventListener('resize', updatePaddingClass);
+    
+    //     return () => {
+    //       window.removeEventListener('resize', updatePaddingClass);
+    //     };
+    //   }, []);
     useEffect(() => {
         Aos.init({ duration: 2000 });
       }, []);
@@ -29,10 +43,13 @@ function Navbar() {
       
     
   return (
-    <animated.nav className="navbar navbar-expand-lg bg-white navbar-light sticky-top p-0" style={props} >
-            <a href="index.html" className="navbar-brand d-flex align-items-center border-end px-4 px-lg-5">
+    // <animated.nav className="navbar navbar-expand-lg bg-white navbar-light sticky-top p-1" >
+    <animated.nav className="navbar navbar-expand-lg bg-white navbar-light sticky-top p-sm-1 p-lg-2" style={props}>
+     {/* <animated.nav className={`navbar navbar-expand-lg bg-white navbar-light sticky-top ${paddingClass}`}> */}
+            <Link to="top" className="navbar-brand d-flex align-items-center border-end px-4 px-lg-5" style={{cursor:"pointer"}}>
                 <img src={logo} height="75px" width="185"/>
-            </a>
+            </Link>
+            
             <button className="navbar-toggler me-4" type="button" onClick={toggleDropdown}>
                 <span className="navbar-toggler-icon"></span>
             </button>

@@ -8,7 +8,7 @@ import img3 from '../img/testimonial-3.jpg'
 function Testimonial() {
 
   return (
-    <div className="container-xxl py-5">
+    <div className="container-xxl py-2">
         <div className="container">
             <div className="text-center mx-auto mb-5 wow fadeInUp" data-wow-delay="0.1s" style={{"maxWidth": "600px"}}>
                 <h6 className="text-primary">Testimonial</h6>

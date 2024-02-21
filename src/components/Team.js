@@ -12,7 +12,7 @@ function Team() {
         Aos.init({ duration: 2000 });
       }, []);
   return (
-    <div id="team" className="container-xxl py-5">
+    <div id="team" className="container-xxl py-2">
         <div className="container"  data-aos="fade-up" data-aos-duration="4500">
             <div className="text-center mx-auto mb-5 wow fadeInUp" data-wow-delay="0.1s" style={{"maxWidth": "600px"}}>
                 <h6 className="text-primary">Team Member</h6>

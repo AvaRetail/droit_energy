@@ -17,6 +17,7 @@ import Cleaner from './components/Cleaner';
 import Mission from './components/Mission';
 import Whatwedo from './components/Whatwedo';
 import './App.css';
+import Footer1 from './components/Footer1';
 
 function App() {
   const scrollToTop = () => {
@@ -40,7 +41,8 @@ function App() {
       {/* <Projects /> */}
       <Quote />
       {/* <Testimonial /> */}
-      <Footer />
+      {/* <Footer /> */}
+      <Footer1 />
       {/* Back to Top Button */}
       <button onClick={scrollToTop} className="btn btn-lg btn-primary btn-lg-square rounded-circle back-to-top">
         <i className="bi bi-arrow-up"></i>

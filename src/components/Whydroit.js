@@ -9,9 +9,10 @@ function Whydroit() {
   }, []);
 
   return (
+    <section className="all_section_bg">
     <div
       id="whydroit"
-      className="container-fluid bg-light overflow-hidden my-5 px-lg-2"
+      className="container-fluid bg-light overflow-hidden my-3 px-lg-2 p-2"
       data-aos="fade-down"
       data-aos-duration="4500"
     >
@@ -28,20 +29,23 @@ function Whydroit() {
             >
               <img
                 className="img-fluid w-100 h-100"
-                src="https://droit.energy/wp-content/uploads/2024/02/why-us.jpg"
+                src="https://droit.energy/wp-content/uploads/2024/02/pexels-pok-rie-157827-1.jpg"
                 style={{ objectFit: "cover" }}
                 alt=""
               />
             </div>
           </div>
           <div
-            className="col-lg-6 about-text py-5 wow fadeIn"
+            className="col-lg-6 about-text py-2 wow fadeIn"
             data-wow-delay="0.5s"
             data-aos="fade-down"
             data-aos-duration="4500"
           >
             <div className="p-lg-5 pe-lg-5">
-              <h6 className="text-primary">Why Droit Energy</h6>
+              {/* <h6 className="text-primary">Why Droit Energy</h6> */}
+              <div className="title mb-3 pt-2" >
+                            <h5 className="text-primary">Why Droit Energy</h5>
+                        </div>
               <h4 className="mb-3" style={{ lineHeight: "unset"}}>
                 We are a full-service geothermal company encompassing every aspect of harnessing geothermal energy.
               </h4>
@@ -112,6 +116,7 @@ function Whydroit() {
         </div>
       </div>
     </div>
+    </section>
   );
 }
 

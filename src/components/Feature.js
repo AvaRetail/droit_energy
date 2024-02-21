@@ -9,7 +9,7 @@ import img3 from '../img/l3.jpg'
 function Feature() {
 
   return (
-    <div className="container-xxl py-5">
+    <div className="container-xxl py-2">
     <div className="container">
         <div className="row g-5">
             <div className="col-md-6 col-lg-3 wow fadeIn" data-wow-delay="0.1s">

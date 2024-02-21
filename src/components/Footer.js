@@ -7,7 +7,7 @@ import img3 from '../img/gallery-3.jpg'
 import img4 from '../img/gallery-4.jpg'
 import img5 from '../img/gallery-5.jpg'
 import img6 from '../img/gallery-6.jpg'
-import logo from '../img/logo.png'
+import logo from '../img/logofooter1.png'
 // import logo from '../img/1.png'
 import { Link } from "react-scroll";
 
@@ -20,10 +20,10 @@ function Footer() {
         Aos.init({ duration: 2000 });
       }, []);
   return (
-    <div className="container-fluid text-body footer mt-5 pt-5 wow fadeIn footer-section" data-wow-delay="0.1s"  data-aos="fade-down" data-aos-duration="4500">
-        <div className="container py-5">
+    <div className="container-fluid text-body footer mt-1 pt-5 wow fadeIn footer-section">
+        <div className="container py-2">
             <div className="row g-5">
-                <div className="col-lg-4 col-md-6">
+                <div className="col-lg-6 col-md-6">
                     <h5 className="text-white mb-4">Address</h5>
                     <div className="mb-2 text-white">
                             <p><i className="fa fa-globe me-3"></i>India</p>
@@ -46,13 +46,14 @@ function Footer() {
                         <a className="btn btn-square btn-outline-light btn-social text-white" href=""><i className="fab fa-linkedin-in"></i></a>
                     </div>
                 </div>
-                <div className="col-lg-4 col-md-6">
-                    {/* <h5 className="text-white mb-4">Quick Links</h5> */}
-                    <img src={logo} height="auto" width="100%"/>
-
-                    <br />
-                    <br />
-                    <p className="text-white">Partner with us in our mission to create a cleaner and more sustainable India. Together, we can make a difference -one geothermal project at a time. Contact us now to learn more about how you can be part of the renewable energy revolution with DROIT. </p>
+                <div className="col-lg-6 col-md-6" >
+                    <h5 className="text-white mb-4">Droit Energy</h5>
+                   
+                    <img src={logo} width="50%" style={{borderRadius:"1rem"}}/>
+                   
+                   
+                    <p className="text-white">Partner with us in our mission to create a cleaner and more sustainable India. Together, we can make a difference -one geothermal project at a time. Contact us now to learn more about how you can be part of the renewable energy revolution with Droit Energy. </p>
+                   
                     {/* <a className="btn btn-link" href="">About Us</a>
                     <a className="btn btn-link" href="">Service</a>
                     <a className="btn btn-link" href="">How it works</a>
@@ -144,21 +145,22 @@ function Footer() {
                         </div>
                     </div>
                 </div> */}
-                <div className="col-lg-4 col-md-6">
+                {/* <div className="col-lg-4 col-md-6">
                     <h5 className="text-white mb-4">Contact Us</h5>
-                    {/* <p>Dolor amet sit justo amet elitr clita ipsum elitr est.</p> */}
+                    
                     <div className="position-relative mx-auto" style={{maxWidth: "400px"}}>
                         <input className="form-control border-0 w-100 py-3 ps-4 pe-5" type="text" placeholder="Your email" />
                         <button type="button" className="btn btn-primary py-2 position-absolute top-0 end-0 mt-2 me-2">Send</button>
                     </div>
-                </div>
+                </div> */}
             </div>
         </div>
         <div className="container">
             <div className="copyright">
                 <div className="row">
                     <div className="col-md-6 text-center text-white text-md-start mb-3 mb-md-0">
-                        &copy; <a href="#" className="text-white">Droit Energy</a>, All Right Reserved.
+                        {/* &copy; <a href="#" className="text-white">Droit Energy</a>, All Rights Reserved. */}
+                        <span className="copy-right-text">© 2024 <a href="https://droit-renewableenergy.vercel.app/">Droit Energy</a> All Rights Reserved.</span>
                     </div>
                     {/* <div className="col-md-6 text-center text-md-start mb-3 mb-md-0">
                         &copy; <img src="../img/logo.png" width="250" height="100"/>, All Right Reserved.

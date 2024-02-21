@@ -8,17 +8,18 @@ function Whatwedo() {
   }, []);
 
   return (
-    <div className="container-fluid ml-3">
+    <div className="container-fluid ml-3 overflow-hidden my-3 px-lg-2">
       <div id="what-we-do-section">
         <div className="col-sm-12">
-          <div className="section-heading p-3 pt-5">
-            <h6 className="text-primary cleaner-h2">What We Do</h6>
-          </div>
+        <div className="title mb-3 cleaner-h2" >
+                            <h5 className="text-primary">What We Do</h5>
+                        </div>
+          
         </div>
       </div>
-      <br />
+      {/* <br /> */}
       <div className="whatwedo-sec">
-        <div className="pt-5">
+        <div className="pt-1">
           <div className="row gx-3 justify-content-center">
             <div className="col-lg-2 col-md-4">
               <div className="text-center">
