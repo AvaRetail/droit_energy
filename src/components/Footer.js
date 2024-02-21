@@ -24,7 +24,7 @@ function Footer() {
         <div className="container py-2">
             <div className="row g-5">
                 <div className="col-lg-6 col-md-6">
-                    <h5 className="text-white mb-4">Address</h5>
+                    <h5 className="text-white mb-4">Our Offices</h5>
                     <div className="mb-2 text-white">
                             <p><i className="fa fa-globe me-3"></i>India</p>
                             <p><i className="fa fa-map-marker-alt me-3"></i>Near Udhna Darwaja, behind Reliance mall, Surat, Gujarat, India. 395002.</p>
@@ -50,7 +50,8 @@ function Footer() {
                     <h5 className="text-white mb-4">Droit Energy</h5>
                    
                     <img src={logo} width="50%" style={{borderRadius:"1rem"}}/>
-                   
+                   <br />
+                   <br />
                    
                     <p className="text-white">Partner with us in our mission to create a cleaner and more sustainable India. Together, we can make a difference -one geothermal project at a time. Contact us now to learn more about how you can be part of the renewable energy revolution with Droit Energy. </p>
                    

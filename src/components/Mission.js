@@ -10,7 +10,7 @@ function Mission() {
         Aos.init({ duration: 2000 });
       }, []);
   return (
-    <div id="mission_section" className="container mission-section" >
+    <div id="mission_section" className="container mission-section p-3" >
         {/* <br /> */}
     <div className="container-fluid overflow-hidden my-3 px-lg-0 mission-section">
         <div className="container about px-lg-0">
@@ -24,7 +24,7 @@ function Mission() {
                         <div className="title mb-3" >
                             <h5 className="text-primary">Our Mission</h5>
                         </div>
-                        <p><i className="fa fa-check-circle text-primary me-3"></i>We aim to expedite the clean energy transition in India through innovative<br /> applications in geoscience, ensuring the provision of cost-effective and<br /> dependable geothermal energy</p>
+                        <p><i className="fa fa-check-circle text-primary me-3"></i>We aim to expedite the clean energy transition in India through innovative applications in geoscience, ensuring the provision of cost-effective and dependable geothermal energy</p>
                     </div>
                 </div>
                 <div className="col-lg-6 about-text fadeIn" data-aos="fade-down" data-aos-duration="4500">

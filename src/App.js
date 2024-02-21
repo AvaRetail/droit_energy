@@ -26,7 +26,7 @@ function App() {
 
   return (
     <div>
-       <Top />
+       {/* <Top /> */}
       <Navbar />
       <Carousel />
       {/* <Feature /> */}
@@ -44,7 +44,7 @@ function App() {
       {/* <Footer /> */}
       <Footer1 />
       {/* Back to Top Button */}
-      <button onClick={scrollToTop} className="btn btn-lg btn-primary btn-lg-square rounded-circle back-to-top">
+      <button onClick={scrollToTop} className="btn btn-primary btn-lg-square rounded-circle back-to-top">
         <i className="bi bi-arrow-up"></i>
       </button>
     </div>

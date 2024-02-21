@@ -26,8 +26,8 @@ function About() {
                                 <div className="title mb-3" >
                                     <h5 className="text-primary">What’s Geothermal Energy</h5>
                                 </div>
-                                <p><i className="fa fa-check-circle text-primary me-3"></i>Geothermal energy is the Earth's internal heat energy stored beneath its surface. This incredible resource originates from the Earth's formation and the decay of radioactive isotopes. As we tap into this vast reservoir, we unlock a renewable and clean source of power that stands out in the crowded energy landscape. (re write this).  </p>
-                                <p><i className="fa fa-check-circle text-primary me-3"></i>At Droit Energy, we harness the incredible potential of geothermal energy - a renewable energy source that taps into the Earth's natural heat. By drilling at the right depths, we unlock abundant heat energy that can power turbines and generate electricity, all while leaving zero carbon footprint. </p>
+                                <p><i className="fa fa-check-circle text-primary me-3"></i>Geothermal energy is the Earth’s internal heat energy stored beneath its surface. This incredible resource originates from the Earth’s formation and the decay of radioactive isotopes. As we tap into this vast reservoir, we unlock a renewable and clean source of power that stands out in the crowded energy landscape.</p>
+                                <p><i className="fa fa-check-circle text-primary me-3"></i>At Droit Energy, we harness the incredible potential of geothermal energy – a renewable energy source that taps into the Earth’s natural heat. By drilling at the right depths, we unlock abundant heat energy that can power turbines and generate electricity, all while leaving zero carbon footprint.</p>
                                 {/* Show button only on desktop */}
                                 <Link
                                     className="btn btn-primary rounded-pill py-3 px-5 mt-3 d-lg-inline-block d-none"

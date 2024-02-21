@@ -2,7 +2,8 @@
 import React, {useEffect,useState} from "react";
 import Aos from "aos";
 import "aos/dist/aos.css";
-import logo from "../img/logo.png"
+// import logo from "../img/logo.png"
+import logo from "../img/Logo-Green.png"
 import { Link } from "react-scroll";
 import { useSpring, animated } from 'react-spring';
 // import { Link } from "react-scroll";
@@ -44,7 +45,7 @@ function Navbar() {
     
   return (
     // <animated.nav className="navbar navbar-expand-lg bg-white navbar-light sticky-top p-1" >
-    <animated.nav className="navbar navbar-expand-lg bg-white navbar-light sticky-top p-sm-1 p-lg-2" style={props}>
+    <animated.nav  className="navbar navbar-expand-lg bg-white navbar-light sticky-top p-sm-1 p-lg-2" style={props}>
      {/* <animated.nav className={`navbar navbar-expand-lg bg-white navbar-light sticky-top ${paddingClass}`}> */}
             <Link to="top" className="navbar-brand d-flex align-items-center border-end px-4 px-lg-5" style={{cursor:"pointer"}}>
                 <img src={logo} height="75px" width="185"/>

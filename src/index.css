@@ -463,6 +463,10 @@
 .all_section_wobg{
   background-color: #fff !important;  
 }
+.title-footerline{
+  border-bottom: 3px solid #fff;
+  width: fit-content;
+}
 /*** About ***/
 .title{
   border-bottom: 3px solid #0d5f56;
@@ -470,6 +474,7 @@
   transition: border-width 0.3s ease; /* Adjust the transition duration and timing function as needed */
 
 }
+
 
 @media (min-width: 992px) {
   .container.about {

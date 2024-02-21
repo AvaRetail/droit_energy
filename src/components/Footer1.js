@@ -29,7 +29,7 @@ function Footer1() {
               <Link className="site-logo" to="top" style={{cursor:"pointer"}}>
                 <img src={logo} alt="logo" /></Link>
 
-              <p>Partner with us in our mission to create a cleaner and more sustainable India. Together, we can make a difference -one geothermal project at a time. Contact us now to learn more about how you can be part of the renewable energy revolution with DROIT.</p>
+              <p>Partner with us in our mission to create a cleaner and more sustainable India. Together, we can make a difference -one geothermal project at a time. Contact us now to learn more about how you can be part of the renewable energy revolution with Droit Energy.</p>
               {/* <ul className="company-footer-contact-list">
                 <li><i className="fas fa-phone"></i>0123456789</li>
                 <li><i className="fas fa-clock"></i>Mon - Sat 8.00 - 18.00</li>
@@ -51,9 +51,13 @@ function Footer1() {
           </div> */}
           <div className="col-lg-6 col-md-6 col-sm-6">
             <div className="widget latest-news-widget">
-              <h5 className="widget-title">Address</h5>
               <ul className="small-post-list">
-                <li>
+              {/* <h5 className="widget-title">Our Offices
+              <hr /></h5> */}
+              <div className="title-footerline mb-3" >
+                   <h5 className="text-white">Our Offices</h5>
+              </div>
+              <li>
                   <div className="small-post-item">
                     {/* <a href="#" className="post-date">July 18, 2018</a> */}
                     {/* <h6 className="small-post-title"><a href="#">Lorem Ipsum is simply dummy text of the printing.</a></h6> */}
@@ -74,7 +78,7 @@ function Footer1() {
                 <li>
                 <p className="mb-2 text-white"><i className="fa fa-envelope me-3"></i>contact@droit.energy</p>
                     <div className="d-flex pt-2 text-white">
-                        <a className="btn btn-outline-light btn-social text-white" href=""><i className="fab fa-twitter"></i></a>
+                        {/* <a className="btn btn-outline-light btn-social text-white" href=""><i className="fab fa-twitter"></i></a> */}
                         <a className="btn btn-square btn-outline-light btn-social text-white" href=""><i className="fab fa-facebook-f"></i></a>
                         <a className="btn btn-square btn-outline-light btn-social text-white" href=""><i className="fab fa-youtube"></i></a>
                         <a className="btn btn-square btn-outline-light btn-social text-white" href=""><i className="fab fa-linkedin-in"></i></a>
@@ -101,15 +105,19 @@ function Footer1() {
     <div className="footer-bottom">
       <div className="container">
         <div className="row">
-            <div className="col-md-6 col-sm-6 text-sm-left text-center">
+            {/* <div className="col-md-6 col-sm-6 text-sm-left text-center">
+              <span className="copy-right-text">© 2024 <a href="https://droit-renewableenergy.vercel.app/">Droit Energy</a> All Rights Reserved.</span>
+            </div> */}
+            <div className="col-md-6 text-center text-white text-md-start mb-3 mb-md-0">
+                        {/* &copy; <a href="#" className="text-white">Droit Energy</a>, All Rights Reserved. */}
               <span className="copy-right-text">© 2024 <a href="https://droit-renewableenergy.vercel.app/">Droit Energy</a> All Rights Reserved.</span>
             </div>
-            <div className="col-md-6 col-sm-6">
+            {/* <div className="col-md-6 col-sm-6">
               <ul className="terms-privacy d-flex justify-content-sm-end justify-content-center">
                 <li><a href="#">Terms & Conditions</a></li>
                 <li><a href="#">Privacy Policy</a></li>
               </ul>
-            </div>
+            </div> */}
         </div>
       </div>
     </div>
