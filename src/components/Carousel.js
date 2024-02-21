@@ -6,7 +6,6 @@ import img3 from '../img/l3.jpg'
 import background from '../video/back.mp4';
 import background1 from '../video/back1.mp4';
 import background3 from '../video/back3.mp4';
-import b1 from '../video/b1.mp4';
 import { useSpring, animated } from 'react-spring';
 import { Link } from "react-scroll";
 import b1 from '../video/b1.mp4';
