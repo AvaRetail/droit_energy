@@ -31,7 +31,7 @@ function Carousel() {
             {/* <img className="img-fluid" src={img2} alt="" /> */}
             <div className="header-container" >
                 <video autoPlay loop muted className='background-video'  data-aos="fade-up" data-aos-duration="4500">
-                    <source src={background} type="video/mp4" />
+                    <source src={b1} type="video/mp4" />
                     Your browser does not support the video tag.
                 </video>
             </div>
