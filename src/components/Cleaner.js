@@ -9,6 +9,7 @@ function Cleaner() {
     Aos.init({ duration: 2000 });
   }, []);
   return (
+    <div className="bg-light p-2">
     <div className="container overflow-hidden my-3 px-lg-2">
       <div className="container about px-lg-0" data-aos="fade-up" data-aos-duration="4500">
         {/* <h6 className="text-primary cleaner-h2 p-3">
@@ -43,6 +44,7 @@ function Cleaner() {
         </Link>
       </div>
       <br />
+    </div>
     </div>
   );
 }

@@ -10,7 +10,6 @@ function About() {
     }, []);
 
     return (
-        <section className="">
             <div className="container overflow-hidden my-2 px-lg-2" data-aos="fade-down" data-aos-duration="4500">
                 <div className="container about px-lg-0">
                     <div className="row g-0 mx-lg-0">
@@ -55,7 +54,6 @@ function About() {
                     </div>
                 </div>
             </div>
-        </section>
     );
 }
 

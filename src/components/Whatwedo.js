@@ -8,7 +8,8 @@ function Whatwedo() {
   }, []);
 
   return (
-    <div className="container-fluid ml-3 overflow-hidden my-3 px-lg-2">
+
+    <div className="container-fluid ml-3 overflow-hidden pt-2 my-3 px-lg-2">
       <div id="what-we-do-section">
         <div className="col-sm-12">
         <div className="title mb-3 cleaner-h2" >

@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import Navbar from './components/Navbar';
 import Top from './components/Top';
 import Carousel from './components/Carousel';
@@ -18,12 +18,34 @@ import Mission from './components/Mission';
 import Whatwedo from './components/Whatwedo';
 import './App.css';
 import Footer1 from './components/Footer1';
+import Testimonial1 from './components/Testimonial1';
 
 function App() {
+  const [showArrow, setShowArrow] = useState(false);
+  useEffect(() => {
+    window.addEventListener('scroll', handleScroll);
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, []);
+  const handleScroll = () => {
+    const scrollTop = window.scrollY;
+    const windowHeight = window.innerHeight;
+    const documentHeight = document.body.scrollHeight;
+
+    // Calculate scroll percentage
+    const scrollPercentage = (scrollTop / (documentHeight - windowHeight)) * 100;
+
+    // If scroll percentage is greater than or equal to 50%, show the arrow pointing up, else show the arrow pointing down
+    setShowArrow(scrollPercentage >= 50);
+  };
+
   const scrollToTop = () => {
     scroll.scrollToTop();
   };
-
+  const scrollToBottom=()=>{
+    scroll.scrollToBottom();
+  }
   return (
     <div>
        {/* <Top /> */}
@@ -32,20 +54,24 @@ function App() {
       {/* <Feature /> */}
       <About />
       <Featurewhy />
-      <Mission />
       <Services />
-      <Whatwedo />
-      <Whydroit />
-      
       <Cleaner />
+      <Mission />
+
+      <Whydroit />
+      <Whatwedo />
+      <Testimonial1 />
+      <Team />
+      
       {/* <Projects /> */}
       <Quote />
+      
       {/* <Testimonial /> */}
       {/* <Footer /> */}
       <Footer1 />
       {/* Back to Top Button */}
-      <button onClick={scrollToTop} className="btn btn-primary btn-lg-square rounded-circle back-to-top">
-        <i className="bi bi-arrow-up"></i>
+      <button onClick={showArrow ? scrollToTop : scrollToBottom} className="btn btn-lg-square rounded-circle back-to-top">
+        <i className={`bi bi-arrow-${showArrow ? 'up' : 'down'}`}></i>
       </button>
     </div>
   );

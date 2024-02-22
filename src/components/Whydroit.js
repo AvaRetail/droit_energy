@@ -9,7 +9,7 @@ function Whydroit() {
   }, []);
 
   return (
-    <section className="all_section_bg">
+    
     <div
       id="whydroit"
       className="container-fluid bg-light overflow-hidden my-3 px-lg-2 p-2"
@@ -28,7 +28,7 @@ function Whydroit() {
               data-aos-duration="4500"
             >
               <img
-                className="img-fluid w-100 h-100"
+                className="img-fluid w-100 h-100 d-none d-lg-block"
                 src="https://droit.energy/wp-content/uploads/2024/02/pexels-pok-rie-157827-1.jpg"
                 style={{ objectFit: "cover" }}
                 alt=""
@@ -116,7 +116,6 @@ function Whydroit() {
         </div>
       </div>
     </div>
-    </section>
   );
 }
 

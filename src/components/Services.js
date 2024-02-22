@@ -13,15 +13,14 @@ function Services() {
         Aos.init({ duration: 2000 });
       }, []);
   return (
-    <section className="all_section_bg my-1">
-    <div id="services" className="container-xxl py-2">
+    <div id="services" className="container-xxl  py-2">
         <div className="container" data-aos="fade-up" data-aos-duration="4500">
             <div className="text-center mx-auto mb-5 wow fadeInUp" data-wow-delay="0.1s" style={{"maxWidth":"600px"}}>
                 {/* <h6 className="text-primary">Why Geothermal Energy</h6> */}
                 <div className="title mb-3 cleaner-h2" >
                             <h5 className="text-primary">Why Geothermal Energy</h5>
                         </div>
-                <h3 className="mb-4">A sustainable energy solution, widely accessible in close proximity to every community and industrial hub across the globe </h3>
+                <h4 className="mb-4">A sustainable energy solution, widely accessible in close proximity to every community and industrial hub across the globe </h4>
             </div>
             <div className="row g-4">
                 <div className="col-md-6 col-lg-4 wow fadeInUp" data-wow-delay="0.1s"  data-aos="fade-down" data-aos-duration="4500">
@@ -107,7 +106,6 @@ function Services() {
             </div>
         </div>
     </div>
-    </section>
   );
 }
 export default Services;

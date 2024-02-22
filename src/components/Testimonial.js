@@ -1,23 +1,52 @@
+// import '../lib/owlcarousel/owl.carousel.min.js';
+//  import '../lib/owlcarousel/assets/owl.carousel.min.css'
+import React, { useEffect,useRef  } from 'react';
+ import OwlCarousel from 'react-owl-carousel'; // Import Owl Carousel component
+//import '../lib/owlcarousel/assets/owl.carousel.min.css'; // Import Owl Carousel styles
 
+import img1 from '../img/testimonial-1.jpg';
+import img2 from '../img/testimonial-2.jpg';
+import img3 from '../img/testimonial-3.jpg';
+//  import $ from 'jquery';
 
-import React, {useEffect} from "react";
-import img1 from '../img/testimonial-1.jpg'
-import img2 from '../img/testimonial-2.jpg'
-import img3 from '../img/testimonial-3.jpg'
-// import './Navbar.css';
 function Testimonial() {
-
-  return (
-    <div className="container-xxl py-2">
+    const owlCarouselRef = useRef(null);
+    useEffect(() => {
+        // Access Owl Carousel instance using the ref
+        if (owlCarouselRef.current) {
+            owlCarouselRef.current.owlCarousel({
+                autoplay: true,
+                smartSpeed: 1000,
+                center: true,
+                dots: false,
+                loop: true,
+                nav: true,
+                navText: [
+                    '<i class="bi bi-arrow-left"></i>',
+                    '<i class="bi bi-arrow-right"></i>'
+                ],
+                responsive: {
+                    0: {
+                        items: 1
+                    },
+                    768: {
+                        items: 2
+                    }
+                }
+            });
+        }
+    }, []);
+    return (
+        <div className="container-xxl py-5">
         <div className="container">
-            <div className="text-center mx-auto mb-5 wow fadeInUp" data-wow-delay="0.1s" style={{"maxWidth": "600px"}}>
+            <div className="text-center mx-auto mb-5 wow fadeInUp" data-wow-delay="0.1s" style={{maxWidth: "600px"}}>
                 <h6 className="text-primary">Testimonial</h6>
                 <h1 className="mb-4">What Our Clients Say!</h1>
             </div>
             <div className="owl-carousel testimonial-carousel wow fadeInUp" data-wow-delay="0.1s">
                 <div className="testimonial-item text-center">
                     <div className="testimonial-img position-relative">
-                        <img className="img-fluid rounded-circle mx-auto mb-5" src={img1} />
+                        <img className="img-fluid rounded-circle mx-auto mb-5" src="img/testimonial-1.jpg" />
                         <div className="btn-square bg-primary rounded-circle">
                             <i className="fa fa-quote-left text-white"></i>
                         </div>
@@ -30,7 +59,7 @@ function Testimonial() {
                 </div>
                 <div className="testimonial-item text-center">
                     <div className="testimonial-img position-relative">
-                        <img className="img-fluid rounded-circle mx-auto mb-5" src={img2}/>
+                        <img className="img-fluid rounded-circle mx-auto mb-5" src="img/testimonial-2.jpg" />
                         <div className="btn-square bg-primary rounded-circle">
                             <i className="fa fa-quote-left text-white"></i>
                         </div>
@@ -43,7 +72,7 @@ function Testimonial() {
                 </div>
                 <div className="testimonial-item text-center">
                     <div className="testimonial-img position-relative">
-                        <img className="img-fluid rounded-circle mx-auto mb-5" src={img3} />
+                        <img className="img-fluid rounded-circle mx-auto mb-5" src="img/testimonial-3.jpg" />
                         <div className="btn-square bg-primary rounded-circle">
                             <i className="fa fa-quote-left text-white"></i>
                         </div>
@@ -57,6 +86,7 @@ function Testimonial() {
             </div>
         </div>
     </div>
-  );
+    );
 }
+
 export default Testimonial;

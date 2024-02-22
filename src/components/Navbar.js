@@ -1,54 +1,45 @@
-
-import React, {useEffect,useState} from "react";
-import Aos from "aos";
-import "aos/dist/aos.css";
-// import logo from "../img/logo.png"
-import logo from "../img/Logo-Green.png"
+import React, { useEffect, useState } from "react";
+// import Aos from "aos";
+// import "aos/dist/aos.css";
+import logo from "../img/Logo-Green.png";
 import { Link } from "react-scroll";
 import { useSpring, animated } from 'react-spring';
-// import { Link } from "react-scroll";
-// import './Navbar.css';
+
 function Navbar() {
-    // const [paddingClass, setPaddingClass] = useState('p-1');
-    // useLayoutEffect(() => {
-    //     function updatePaddingClass() {
-    //       const isMobile = window.innerWidth < 768; // Example threshold for mobile devices
-    //       setPaddingClass(isMobile ? 'p-2' : 'p-1');
-    //     }
     
-    //     updatePaddingClass(); // Initial update
-    //     window.addEventListener('resize', updatePaddingClass);
-    
-    //     return () => {
-    //       window.removeEventListener('resize', updatePaddingClass);
-    //     };
-    //   }, []);
-    useEffect(() => {
-        Aos.init({ duration: 2000 });
-      }, []);
-      const [isOpen, setIsOpen] = useState(false);
+    // useEffect(() => {
+    //     Aos.init({ duration: 2000 });
+    // }, []);
+    const [isOpen, setIsOpen] = useState(false);
+    const [isDropdownOpen, setIsDropdownOpen] = useState(false);
 
     const toggleDropdown = () => {
         setIsOpen(!isOpen);
     };
 
+    const toggleGeothermalDropdown = () => {
+        setIsDropdownOpen(!isDropdownOpen);
+    };
+
     const closeDropdown = () => {
         setIsOpen(false);
+        setIsDropdownOpen(false); // Also close the dropdown when closing the menu
     };
-      // Define animation properties using useSpring hook
-      const props = useSpring({
+    
+    const closeGeothermalDropdown = () => {
+        setIsDropdownOpen(false);
+    };
+
+    const props = useSpring({
         from: { opacity: 0, transform: 'translateX(100%)' },
         to: { opacity: 1, transform: 'translateX(0)' },
         config: { duration: 1000 }
-      });
-      
-    
-  return (
-    // <animated.nav className="navbar navbar-expand-lg bg-white navbar-light sticky-top p-1" >
-    <animated.nav  className="navbar navbar-expand-lg bg-white navbar-light sticky-top p-sm-1 p-lg-2" style={props}>
-     {/* <animated.nav className={`navbar navbar-expand-lg bg-white navbar-light sticky-top ${paddingClass}`}> */}
+    });
+
+    return (
+        <animated.nav  className="navbar navbar-expand-lg bg-white navbar-light sticky-top p-sm-1 p-lg-2" style={props}>
             <Link to="top" className="navbar-brand d-flex align-items-center border-end px-4 px-lg-5" style={{cursor:"pointer"}}>
-                <img src={logo} height="75px" width="185"/>
+                <img src={logo} height="70px" width="185" alt="Logo"/>
             </Link>
             
             <button className="navbar-toggler me-4" type="button" onClick={toggleDropdown}>
@@ -63,15 +54,15 @@ function Navbar() {
                         smooth={true}
                         duration={50}
                         style={{cursor: "pointer"}}
-                        onClick={closeDropdown} // Close menu on click
+                        onClick={closeDropdown}
                     >
                         Our Mission
                     </Link>
                     <li className="nav-item dropdown">
-                        <a className="nav-link dropdown-toggle" href="#" role="button" onClick={toggleDropdown}>
+                        <a className="nav-link dropdown-toggle" href="#" role="button" onClick={toggleGeothermalDropdown}>
                             Geothermal Energy
                         </a>
-                        <ul className={`dropdown-menu ${isOpen ? 'show' : ''}`} aria-labelledby="geothermalDropdown">
+                        <ul className={`dropdown-menu ${isDropdownOpen ? 'show' : ''}`} aria-labelledby="geothermalDropdown">
                             <li>
                                 <Link
                                     className="dropdown-item"
@@ -124,20 +115,20 @@ function Navbar() {
                     >
                         Why Us
                     </Link>
-                    {/* <Link
+                    <Link
                         className="nav-item nav-link"
-                        to="quote"
+                        to="team"
                         spy={true}
                         smooth={true}
                         duration={50}
                         style={{cursor: "pointer"}}
                         onClick={closeDropdown} // Close menu on click
                     >
-                        Contact Us
-                    </Link> */}
+                        Our Team
+                    </Link>
                 </div>
                 <Link
-                    className="btn btn-primary rounded-0 py-4 px-lg-5 d-none d-lg-block"
+                    className="btn btn-primary rounded-1 py-3 px-lg-5 d-none d-lg-block"
                     to="quote"
                     spy={true}
                     smooth={true}
@@ -146,10 +137,10 @@ function Navbar() {
                     onClick={closeDropdown} // Close menu on click
                 >
                     Contact Us
-                    <i className="fa fa-arrow-right ms-3"></i>
                 </Link>
             </div>
         </animated.nav>
-  );
+    );
 }
+
 export default Navbar;

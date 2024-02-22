@@ -79,9 +79,14 @@ function Footer1() {
                 <p className="mb-2 text-white"><i className="fa fa-envelope me-3"></i>contact@droit.energy</p>
                     <div className="d-flex pt-2 text-white">
                         {/* <a className="btn btn-outline-light btn-social text-white" href=""><i className="fab fa-twitter"></i></a> */}
-                        <a className="btn btn-square btn-outline-light btn-social text-white" href=""><i className="fab fa-facebook-f"></i></a>
+                        {/* <a className="btn btn-square btn-outline-light btn-social text-white" href=""><i className="fab fa-facebook-f"></i></a>
                         <a className="btn btn-square btn-outline-light btn-social text-white" href=""><i className="fab fa-youtube"></i></a>
-                        <a className="btn btn-square btn-outline-light btn-social text-white" href=""><i className="fab fa-linkedin-in"></i></a>
+                        <a className="btn btn-square btn-outline-light btn-social text-white" href=""><i className="fab fa-linkedin-in"></i></a> */}
+                        
+                        <a className="btn btn-lg-square btn-outline-light btn-social rounded-circle mt-3 text-white" href=""><i className="fab fa-facebook-f"></i></a>
+                        <a className="btn btn-lg-square btn-outline-light btn-social rounded-circle mt-3 text-white" href=""><i className="fab fa-twitter"></i></a>
+                        <a className="btn btn-lg-square btn-outline-light btn-social rounded-circle mt-3 text-white" href=""><i className="fab fa-instagram"></i></a>
+                        <a className="btn btn-lg-square btn-outline-light btn-social rounded-circle mt-3 text-white" href=""><i className="fab fa-linkedin-in"></i></a> 
                     </div>
                 </li>
               </ul>

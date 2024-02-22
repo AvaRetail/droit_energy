@@ -11,8 +11,8 @@ function Featurewhy() {
         Aos.init({ duration: 2000 });
       }, []);
   return (
-    <section className="all_section_bg">
-    <div id="featurewhy" className="container bg-light overflow-hidden my-2 px-lg-2"  data-aos="fade-down" data-aos-duration="4500">
+    <div className="bg-light">
+    <div id="featurewhy" className="container overflow-hidden my-2 px-lg-2"  data-aos="fade-down" data-aos-duration="4500">
         <div className="container feature px-lg-0">
             <div className="row g-0 mx-lg-0">
                 <div className="col-lg-6 feature-text py-1 wow fadeIn" data-wow-delay="0.1s">
@@ -82,7 +82,7 @@ function Featurewhy() {
             </div>
         </div>
     </div>
-    </section>
+    </div>
   );
 }
 export default Featurewhy;
