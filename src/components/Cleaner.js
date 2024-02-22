@@ -16,7 +16,7 @@ function Cleaner() {
           Let’s Make the Planet Cleaner!
         </h6> */}
         <div className="title mb-3 cleaner-h2" >
-                            <h5 className="text-primary">Let’s Make the Planet Cleaner!</h5>
+                            <h5 className="text-primary">Let’s Make the Planet Cleaner</h5>
                         </div>
         {/* <br /> */}
         <p className="mb-4 pb-1 cleaner-p">

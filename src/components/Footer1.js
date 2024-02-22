@@ -57,23 +57,36 @@ function Footer1() {
               <div className="title-footerline mb-3" >
                    <h5 className="text-white">Our Offices</h5>
               </div>
-              <li>
-                  <div className="small-post-item">
+              {/* <li>
+                  <div className="small-post-item"> */}
                     {/* <a href="#" className="post-date">July 18, 2018</a> */}
                     {/* <h6 className="small-post-title"><a href="#">Lorem Ipsum is simply dummy text of the printing.</a></h6> */}
-                    <p><i className="fa fa-globe me-3"></i>India</p>
+                    {/* <p><i className="fa fa-globe me-3"></i>India</p>
                     <p><i className="fa fa-map-marker-alt me-3"></i>Near Udhna Darwaja, behind Reliance mall, Surat, Gujarat, India. 395002.</p>
-                    <p><i className="fa fa-phone-alt me-3"></i>(+91) 89288 62707 (WhatsApp)</p>
-                  </div>
-                </li>
-                <hr />
+                    <p><i className="fa fa-phone-alt me-3"></i>(+91) 89288 62707 (WhatsApp)</p> */}
+                  {/* </div>
+                </li> */}
                 <li>
                   <div className="small-post-item">
-                  <p><i className="fa fa-globe me-3"></ i>USA</p>
-                            <p><i className="fa fa-map-marker-alt me-3"></i>3280 B street suite C, Auburn, WA 98001.</p>
-                            <p><i className="fa fa-phone-alt me-3"></i>(+1) 425 522 4037</p>
+                      <div className="info-container">
+                          <p className=" pb-3"><i className="fa fa-globe me-3"></i>India <br/></p>
+                          <p className=" pb-3"><i className="fa fa-map-marker-alt me-3"></i><span>Near Udhna Darwaja, behind Reliance mall, Surat, Gujarat, India. 395002.</span></p>
+                          <p className=" pb-3"><i className="fa fa-phone-alt me-3"></i>(+91) 89288 62707 (WhatsApp)</p>
+                      </div>
                   </div>
                 </li>
+
+                <hr />
+                <li>
+  <div className="small-post-item">
+    <div className="info-container">
+      <p className="pb-3"><i className="fa fa-globe me-3"></i>USA</p>
+      <p className="pb-3"><i className="fa fa-map-marker-alt me-3"></i><span>3280 B street suite C, Auburn, WA 98001.</span></p>
+      <p className="pb-3"><i className="fa fa-phone-alt me-3"></i>(+91) 89288 62707 (WhatsApp)</p>
+    </div>
+  </div>
+</li>
+
                 <hr />
                 <li>
                 <p className="mb-2 text-white"><i className="fa fa-envelope me-3"></i>contact@droit.energy</p>

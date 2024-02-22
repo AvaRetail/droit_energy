@@ -128,7 +128,7 @@ function Navbar() {
                     </Link>
                 </div>
                 <Link
-                    className="btn btn-primary rounded-1 py-3 px-lg-5 d-none d-lg-block"
+                    className="btn btn-primary rounded-1 py-4 px-lg-5 d-none d-lg-block"
                     to="quote"
                     spy={true}
                     smooth={true}

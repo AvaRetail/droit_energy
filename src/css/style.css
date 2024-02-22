@@ -780,6 +780,22 @@
 .footer-section{
     background-color: #0d5f56;
 }
+.info-container {
+    /* display: flex; */
+    flex-wrap: wrap;
+  }
+  
+  .info-container p {
+    margin: 0;
+    display: flex;
+    align-items: center;
+  }
+  
+  .info-container p i {
+    flex-shrink: 0;
+    margin-right: 0.5rem;
+  }
+  
 .footer .btn.btn-social {
     margin-right: 5px;
     color: #9B9B9B;
