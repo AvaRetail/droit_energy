@@ -4,6 +4,7 @@ import img1 from '../img/l1.jpg'
 import img2 from '../img/l2.jpg'
 import img3 from '../img/l3.jpg'
 import background from '../video/back.mp4';
+import backgroundHd from '../video/back-fullhd.mp4';
 import background1 from '../video/back1.mp4';
 import background3 from '../video/back3.mp4';
 import { useSpring, animated } from 'react-spring';
@@ -31,7 +32,7 @@ function Carousel() {
             {/* <img className="img-fluid" src={img2} alt="" /> */}
             <div className="header-container" >
                 <video autoPlay loop muted className='background-video'  data-aos="fade-up" data-aos-duration="4500">
-                    <source src={background} type="video/mp4" />
+                    <source src={backgroundHd} type="video/mp4" />
                     Your browser does not support the video tag.
                 </video>
             </div>

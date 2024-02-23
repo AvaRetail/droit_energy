@@ -45,7 +45,7 @@ function Navbar() {
             <button className="navbar-toggler me-4" type="button" onClick={toggleDropdown}>
                 <span className="navbar-toggler-icon"></span>
             </button>
-            <div className={`collapse navbar-collapse ${isOpen ? 'show' : ''}`} id="navbarCollapse">
+            <div className={`collapse navbar-collapse ${isOpen ? 'show' : ''}`} id="navbarCollapse" >
                 <div className="navbar-nav ms-auto p-4 p-lg-0">
                     <Link
                         className="nav-item nav-link"
@@ -62,7 +62,7 @@ function Navbar() {
                         <a className="nav-link dropdown-toggle" href="#" role="button" onClick={toggleGeothermalDropdown}>
                             Geothermal Energy
                         </a>
-                        <ul className={`dropdown-menu ${isDropdownOpen ? 'show' : ''}`} aria-labelledby="geothermalDropdown">
+                        <ul className={`dropdown-menu ${isDropdownOpen ? 'show' : ''}`} aria-labelledby="geothermalDropdown" >
                             <li>
                                 <Link
                                     className="dropdown-item"
