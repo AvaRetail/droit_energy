@@ -21,6 +21,7 @@ import Footer1 from './components/Footer1';
 import Testimonial1 from './components/Testimonial1';
 import Partners from './components/Partners';
 import Blog from './components/Blog';
+import Partners1 from './components/Partners1';
 
 function App() {
   const [showArrow, setShowArrow] = useState(false);
@@ -68,7 +69,7 @@ function App() {
       {/* <Partners /> */}
       <Projects />
       {/* <Partners /> */}
-
+<Partners1 />
       <Quote />
       
       {/* <Testimonial /> */}

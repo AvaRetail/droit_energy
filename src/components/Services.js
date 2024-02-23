@@ -2,7 +2,7 @@
 import React, {useEffect} from "react";
 import img1 from '../img/hiw-1.jpg'
 import img2 from '../img/hiw-2.jpg'
-import img3 from '../img/hiw-3.jpg'
+import img3 from '../img/hiw-3.png'
 import Aos from "aos";
 import "aos/dist/aos.css";
 function Services() {
