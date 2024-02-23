@@ -2,16 +2,19 @@ import React, { useEffect, useRef } from 'react';
 import img1 from '../img/testimonial-1.jpg';
 import img2 from '../img/testimonial-2.jpg';
 import img3 from '../img/testimonial-3.jpg';
+import Aos from "aos";
+import "aos/dist/aos.css";
 
 function Testimonial1() {
-    const testimonialRef = useRef(null);
-
     useEffect(() => {
-        const testim = testimonialRef.current;
-        const testimDots = Array.prototype.slice.call(testim.querySelectorAll(".dot"));
-        const testimContent = Array.prototype.slice.call(testim.querySelectorAll(".cont > div"));
-        const testimLeftArrow = testim.querySelector("#left-arrow");
-        const testimRightArrow = testim.querySelector("#right-arrow");
+        Aos.init({ duration: 2000 });
+      }, []);
+    useEffect(() => {
+        const testim = document.getElementById("testim");
+        const testimDots = Array.prototype.slice.call(document.getElementById("testim-dots").children);
+        const testimContent = Array.prototype.slice.call(document.getElementById("testim-content").children);
+        const testimLeftArrow = document.getElementById("left-arrow");
+        const testimRightArrow = document.getElementById("right-arrow");
         const testimSpeed = 4500;
         let currentSlide = 0;
         let currentActive = 0;
@@ -45,90 +48,73 @@ function Testimonial1() {
             currentActive = currentSlide;
 
             clearTimeout(testimTimer);
-            testimTimer = setTimeout(() => {
+            testimTimer = setTimeout(function () {
                 playSlide(currentSlide += 1);
-            }, testimSpeed);
+            }, testimSpeed)
         }
 
-        function handleLeftArrowClick() {
+        testimLeftArrow.addEventListener("click", function () {
             playSlide(currentSlide -= 1);
-        }
+        })
 
-        function handleRightArrowClick() {
+        testimRightArrow.addEventListener("click", function () {
             playSlide(currentSlide += 1);
+        })
+
+        for (let l = 0; l < testimDots.length; l++) {
+            testimDots[l].addEventListener("click", function () {
+                playSlide(currentSlide = testimDots.indexOf(this));
+            })
         }
-
-        function handleDotClick(index) {
-            playSlide(index);
-        }
-
-        function handleKeyUp(e) {
-            switch (e.keyCode) {
-                case 37:
-                    handleLeftArrowClick();
-                    break;
-                case 39:
-                    handleRightArrowClick();
-                    break;
-                default:
-                    break;
-            }
-        }
-
-        function handleTouchStart(e) {
-            touchStartPos = e.changedTouches[0].clientX;
-        }
-
-        function handleTouchEnd(e) {
-            touchEndPos = e.changedTouches[0].clientX;
-            touchPosDiff = touchStartPos - touchEndPos;
-
-            if (touchPosDiff > 0 + ignoreTouch) {
-                handleLeftArrowClick();
-            } else if (touchPosDiff < 0 - ignoreTouch) {
-                handleRightArrowClick();
-            }
-        }
-
-        testimLeftArrow.addEventListener("click", handleLeftArrowClick);
-        testimRightArrow.addEventListener("click", handleRightArrowClick);
-        testimDots.forEach((dot, index) => {
-            dot.addEventListener("click", () => handleDotClick(index));
-        });
-        document.addEventListener("keyup", handleKeyUp);
-        testim.addEventListener("touchstart", handleTouchStart);
-        testim.addEventListener("touchend", handleTouchEnd);
 
         playSlide(currentSlide);
 
-        return () => {
-            clearTimeout(testimTimer);
-            testimLeftArrow.removeEventListener("click", handleLeftArrowClick);
-            testimRightArrow.removeEventListener("click", handleRightArrowClick);
-            testimDots.forEach((dot, index) => {
-                dot.removeEventListener("click", () => handleDotClick(index));
-            });
-            document.removeEventListener("keyup", handleKeyUp);
-            testim.removeEventListener("touchstart", handleTouchStart);
-            testim.removeEventListener("touchend", handleTouchEnd);
-        };
-    }, []);
+        document.addEventListener("keyup", function (e) {
+            switch (e.keyCode) {
+                case 37:
+                    testimLeftArrow.click();
+                    break;
+
+                case 39:
+                    testimRightArrow.click();
+                    break;
+
+                default:
+                    break;
+            }
+        })
+
+        testim.addEventListener("touchstart", function (e) {
+            touchStartPos = e.changedTouches[0].clientX;
+        })
+
+        testim.addEventListener("touchend", function (e) {
+            touchEndPos = e.changedTouches[0].clientX;
+
+            touchPosDiff = touchStartPos - touchEndPos;
+
+            if (touchPosDiff > 0 + ignoreTouch) {
+                testimLeftArrow.click();
+            } else if (touchPosDiff < 0 - ignoreTouch) {
+                testimRightArrow.click();
+            } else {
+                return;
+            }
+
+        })
+    }, []); // empty dependency array means this effect will run only once after initial render
 
     return (
-        <div className='bg-light'>
-        <div className="container overflow-hidden my-2 px-lg-2 ml-5" >
-        <div className="container about px-lg-0">
-        <div className=" text-center mx-auto mb-5 wow fadeInUp" data-wow-delay="0.1s" style={{"maxWidth": "600px"}}>
-        <div className="title mb-3 cleaner-h2 pt-5" >
+        <div>
+        <section id="testim" className="testim">
+            {/* <div className="text-center mx-auto mb-5 wow fadeInUp" data-wow-delay="0.1s" style={{maxWidth: "600px"}}>
+                <h5 className="text-primary">Testimonial</h5>
+                <h1 className="mb-4">What Our Clients Say!</h1>
+            </div> */}
+            <div className="title mb-3 cleaner-h2" data-aos="fade-down" data-aos-duration="4500">
                             <h5 className="text-primary">Testimonials</h5>
                         </div>
-                {/* <h1 className="mb-4">Experienced Team Members</h1> */}
-            </div>
-
-            <section id="testim" className="testim" ref={testimonialRef}>
-            <div className="testim-cover">
             <div className="wrap">
-
                 <span id="right-arrow" className="arrow right fa fa-chevron-right"></span>
                 <span id="left-arrow" className="arrow left fa fa-chevron-left "></span>
                 <ul id="testim-dots" className="dots">
@@ -138,45 +124,35 @@ function Testimonial1() {
                     <li className="dot"></li>
                     <li className="dot"></li>
                 </ul>
-                <div id="testim-content" className="cont">
-                    
+                <div id="testim-content" className="cont" data-aos="fade-up" data-aos-duration="4500">
                     <div className="active">
-                        <div className="img"><img src="https://p16-sg-default.akamaized.net/aweme/1080x1080/tiktok-obj/1666413671597057.jpeg" alt="" /></div>
+                        <div className="img"><img src={img1} alt="" /></div>
                         <h2>Lorem P. Ipsum</h2>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.</p>                    
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.</p>
                     </div>
-
                     <div>
-                        <div className="img"><img src="https://p16-sg-default.akamaized.net/aweme/1080x1080/tiktok-obj/1666413671597057.jpeg" alt="" /></div>
+                        <div className="img"><img src={img2} alt="" /></div>
                         <h2>Mr. Lorem Ipsum</h2>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.</p>                    
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.</p>
                     </div>
-
                     <div>
-                        <div className="img"><img src="https://in.bmscdn.com/iedb/artist/images/website/poster/large/kartik-aaryan-1045198-08-12-2017-06-34-11.jpg" alt="" /></div>
+                        <div className="img"><img src={img3} alt="" /></div>
                         <h2>Lorem Ipsum</h2>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.</p>                    
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.</p>
                     </div>
-
                     <div>
-                        <div className="img"><img src="https://p16-sg-default.akamaized.net/aweme/1080x1080/tiktok-obj/1666413671597057.jpeg" alt="" /></div>
+                        <div className="img"><img src={img1} alt="" /></div>
                         <h2>Lorem De Ipsum</h2>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.</p>                    
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.</p>
                     </div>
-
                     <div>
-                        <div className="img"><img src="https://p16-sg-default.akamaized.net/aweme/1080x1080/tiktok-obj/1666413671597057.jpeg" alt="" /></div>
+                        <div className="img"><img src={img2} alt="" /></div>
                         <h2>Ms. Lorem R. Ipsum</h2>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.</p>                    
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.</p>
                     </div>
-
                 </div>
-
             </div>
-         </div>
-            </section>
-        </div>
-        </div>
+        </section>
         </div>
     );
 }

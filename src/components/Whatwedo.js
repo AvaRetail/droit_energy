@@ -29,7 +29,7 @@ function Whatwedo() {
                   <div className="whatwedo-icon">  
                   <i className="fas fa-search-location fa-6x mb-3"></i>
                   </div>
-                  <h4 className="card-title">Site selection & Evaluation</h4>
+                  <h5 className="card-title">Site selection & Evaluation</h5>
                 </div>
               </div>
             </div>
@@ -40,7 +40,7 @@ function Whatwedo() {
                 <div className="whatwedo-icon">  
                   <i className="fas fa-globe-asia fa-6x mb-3"></i>
                   </div>
-                  <h4 className="card-title">Sub-Surface Geology</h4>
+                  <h5 className="card-title">Sub-Surface Geology</h5>
                 </div>
               </div>
             </div>
@@ -51,7 +51,7 @@ function Whatwedo() {
                 <div className="whatwedo-icon">  
                   <i className="fas fa-tools fa-6x mb-3"></i>
                   </div>
-                  <h4 className="card-title">Drilling to Great Depths</h4>
+                  <h5 className="card-title">Drilling to Great Depths</h5>
                 </div>
               </div>
             </div>
@@ -62,7 +62,7 @@ function Whatwedo() {
                 <div className="whatwedo-icon">  
                   <i className="fas fa-seedling fa-6x mb-3"></i>
                   </div>
-                  <h4 className="card-title">Harvesting Geothermal Energy</h4>
+                  <h5 className="card-title">Harvesting Geothermal Energy</h5>
                 </div>
               </div>
             </div>
@@ -73,7 +73,7 @@ function Whatwedo() {
                 <div className="whatwedo-icon">  
                   <i className="far fa-sun fa-6x mb-3"></i>
                   </div>
-                  <h4 className="card-title">Converting Geothermal Energy</h4>
+                  <h5 className="card-title">Converting Geothermal Energy</h5>
                 </div>
               </div>
             </div>

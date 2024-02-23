@@ -1,6 +1,6 @@
 
 import React, {useEffect} from "react";
-import img1 from '../img/feature.jpg'
+import img1 from '../img/howitworks.png'
 import img2 from '../img/l2.jpg'
 import img3 from '../img/l3.jpg'
 import Aos from "aos";
@@ -18,7 +18,7 @@ function Featurewhy() {
                 <div className="col-lg-6 feature-text py-1 wow fadeIn" data-wow-delay="0.1s">
                     <div className="p-lg-5 ps-lg-3"  data-aos="fade-down" data-aos-duration="4500">
                     <div className="title mb-3" >
-                        <h5 className="text-primary">How It Works!</h5>
+                        <h5 className="text-primary">How It Works</h5>
                         </div>
                         {/* <h1 className="mb-4">Revealing Earth's Power: The Basics of Geothermal Energy</h1> */}
                         <p className="mb-4 pb-2"><i className="fa fa-check-circle text-primary me-3"></i>The process of harnessing geothermal energy begins by drilling deep into the Earth’s crust. The Earth’s interior, at these depths, is hotter than the surface, and this heat can be captured through wells. Water is then circulated through these wells, turning into steam as it encounters the intense heat. This steam is what drives turbines, generating electricity.</p>
@@ -74,9 +74,9 @@ function Featurewhy() {
                 </div>
                 <div className="col-lg-6 pe-lg-0 p-4 wow fadeIn" data-wow-delay="0.5s" style={{minHeight: "300px"}}  data-aos="fade-up" data-aos-duration="4500">
                     <div className="position-relative h-100">
-                        {/* <img className="position-absolute img-fluid w-100 h-100" src={img1} style={{"objectFit": "cover;"}} alt="" /> */}
+                        <img className="position-absolute img-fluid w-100 h-100" src={img1} style={{"objectFit": "cover"}} alt="" />
                         {/* <iframe className="img-fluid w-100 h-100" style={{objectFit: "cover"}} src="https://www.youtube.com/embed/j7q653ffQO4?si=IYzTJmQE1fi_hkhA" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"></iframe> */}
-                        <iframe className="img-fluid w-100 h-100" style={{objectFit: "cover"}}  src="https://www.youtube.com/embed/iBrSU22d0sI?si=F9kErI3FThJhgopb" title="Droit Energy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"></iframe>
+                        {/* <iframe className="img-fluid w-100 h-100" style={{objectFit: "cover"}}  src="https://www.youtube.com/embed/iBrSU22d0sI?si=F9kErI3FThJhgopb" title="Droit Energy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"></iframe> */}
                     </div>
                 </div>
             </div>

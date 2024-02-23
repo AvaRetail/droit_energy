@@ -19,6 +19,8 @@ import Whatwedo from './components/Whatwedo';
 import './App.css';
 import Footer1 from './components/Footer1';
 import Testimonial1 from './components/Testimonial1';
+import Partners from './components/Partners';
+import Blog from './components/Blog';
 
 function App() {
   const [showArrow, setShowArrow] = useState(false);
@@ -60,10 +62,13 @@ function App() {
 
       <Whydroit />
       <Whatwedo />
-      <Testimonial1 />
       <Team />
-      
-      {/* <Projects /> */}
+      <Testimonial1 />
+      {/* <Blog /> */}
+      {/* <Partners /> */}
+      <Projects />
+      {/* <Partners /> */}
+
       <Quote />
       
       {/* <Testimonial /> */}

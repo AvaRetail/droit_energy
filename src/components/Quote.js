@@ -20,7 +20,7 @@ function Quote() {
                     <div className="title mb-3" >
                             <h5 className="text-primary">Contact Us</h5>
                         </div>
-                    <h1 className="mb-4">Partner with us</h1>
+                    <h4 className="mb-4">Partner with us</h4>
                     <p className="mb-4 pb-2">Join us in our mission to create a cleaner and more sustainable India. Together, we can make a difference - one geothermal project at a time. Contact us now to learn more about how you can be part of the renewable energy revolution with Droit Energy. </p>
                     <form>
                         <div className="row g-3">

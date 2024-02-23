@@ -1,10 +1,30 @@
+
+*,
+*:after,
+*:before {
+    margin: 0;
+    padding: 0;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -ms-box-sizing: border-box;
+    -o-box-sizing: border-box;
+    box-sizing: border-box;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    -o-user-select: none;
+    -moz-user-select: none;
+    user-select: none;
+    cursor: default;
+}
+
 .testim {
-		
-		
+		width: 100%;
+		/* position: absolute; */
+		top: 50%;
 		/* -webkit-transform: translatey(-50%); */
-		/* -moz-transform: translatey(-50%);
+		-moz-transform: translatey(-50%);
 		-ms-transform: translatey(-50%);
-		-o-transform: translatey(-50%); */
+		-o-transform: translatey(-50%);
 		/* transform: translatey(-50%); */
 }
 
@@ -19,7 +39,7 @@
 .testim .arrow {
     display: block;
     position: absolute;
-    color: #333;
+    color: #0d5f56;
     cursor: pointer;
     font-size: 2em;
     top: 50%;
@@ -42,16 +62,16 @@
 }
 
 .testim .arrow:hover {
-    color: green;
+    color: #0d5f56;
 }
     
 
 .testim .arrow.left {
-    left: 70px;
+    left: 10px;
 }
 
 .testim .arrow.right {
-    right: 70px;
+    right: 10px;
 }
 
 .testim .dots {
@@ -71,7 +91,7 @@
     width: 12px;
     height: 12px;
     border-radius: 50%;
-    border: 1px solid green;
+    border: 1px solid #9B9B9B;
     margin: 0 10px;
     cursor: pointer;
     -webkit-transition: all .5s ease-in-out;    
@@ -84,8 +104,8 @@
 
 .testim .dots .dot.active,
 .testim .dots .dot:hover {
-    background: green;
-    border-color: green;
+    background: #0d5f56;
+    border-color: #0d5f56;
 }
 
 .testim .dots .dot.active {
@@ -130,15 +150,14 @@
 }
 
 .testim .cont div h2 {
-    color: green;
+    color: #0d5f56;
     font-size: 1em;
     margin: 15px 0;
 }
 
 .testim .cont div p {
-    font-size: 1.15em;
-    color: #333;
-    width: 70%;
+    color: #9B9B9B;
+    width: 80%;
     margin: auto;
 }
 
@@ -192,107 +211,107 @@
 
 @-webkit-keyframes testim-scale {
     0% {
-        -webkit-box-shadow: 0px 0px 0px 0px #eee;
-        box-shadow: 0px 0px 0px 0px #eee;
+        -webkit-box-shadow: 0px 0px 0px 0px #9B9B9B;
+        box-shadow: 0px 0px 0px 0px #9B9B9B;
     }
 
     35% {
-        -webkit-box-shadow: 0px 0px 10px 5px #eee;        
-        box-shadow: 0px 0px 10px 5px #eee;        
+        -webkit-box-shadow: 0px 0px 10px 5px #9B9B9B;        
+        box-shadow: 0px 0px 10px 5px #9B9B9B;        
     }
 
     70% {
-        -webkit-box-shadow: 0px 0px 10px 5px #ea830e;        
-        box-shadow: 0px 0px 10px 5px #ea830e;        
+        -webkit-box-shadow: 0px 0px 10px 5px #0d5f56;        
+        box-shadow: 0px 0px 10px 5px #0d5f56;        
     }
 
     100% {
-        -webkit-box-shadow: 0px 0px 0px 0px #ea830e;        
-        box-shadow: 0px 0px 0px 0px #ea830e;        
+        -webkit-box-shadow: 0px 0px 0px 0px #0d5f56;        
+        box-shadow: 0px 0px 0px 0px #0d5f56;        
     }
 }
 
 @-moz-keyframes testim-scale {
     0% {
-        -moz-box-shadow: 0px 0px 0px 0px #eee;
-        box-shadow: 0px 0px 0px 0px #eee;
+        -moz-box-shadow: 0px 0px 0px 0px #9B9B9B;
+        box-shadow: 0px 0px 0px 0px #9B9B9B;
     }
 
     35% {
-        -moz-box-shadow: 0px 0px 10px 5px #eee;        
-        box-shadow: 0px 0px 10px 5px #eee;        
+        -moz-box-shadow: 0px 0px 10px 5px #9B9B9B;        
+        box-shadow: 0px 0px 10px 5px #9B9B9B;        
     }
 
     70% {
-        -moz-box-shadow: 0px 0px 10px 5px #ea830e;        
-        box-shadow: 0px 0px 10px 5px #ea830e;        
+        -moz-box-shadow: 0px 0px 10px 5px #0d5f56;        
+        box-shadow: 0px 0px 10px 5px #0d5f56;        
     }
 
     100% {
-        -moz-box-shadow: 0px 0px 0px 0px #ea830e;        
-        box-shadow: 0px 0px 0px 0px #ea830e;        
+        -moz-box-shadow: 0px 0px 0px 0px #0d5f56;        
+        box-shadow: 0px 0px 0px 0px #0d5f56;        
     }
 }
 
 @-ms-keyframes testim-scale {
     0% {
-        -ms-box-shadow: 0px 0px 0px 0px #eee;
-        box-shadow: 0px 0px 0px 0px #eee;
+        -ms-box-shadow: 0px 0px 0px 0px #9B9B9B;
+        box-shadow: 0px 0px 0px 0px #9B9B9B;
     }
 
     35% {
-        -ms-box-shadow: 0px 0px 10px 5px #eee;        
-        box-shadow: 0px 0px 10px 5px #eee;        
+        -ms-box-shadow: 0px 0px 10px 5px #9B9B9B;        
+        box-shadow: 0px 0px 10px 5px #9B9B9B;        
     }
 
     70% {
-        -ms-box-shadow: 0px 0px 10px 5px #ea830e;        
-        box-shadow: 0px 0px 10px 5px #ea830e;        
+        -ms-box-shadow: 0px 0px 10px 5px #0d5f56;        
+        box-shadow: 0px 0px 10px 5px #0d5f56;        
     }
 
     100% {
-        -ms-box-shadow: 0px 0px 0px 0px #ea830e;        
-        box-shadow: 0px 0px 0px 0px #ea830e;        
+        -ms-box-shadow: 0px 0px 0px 0px #0d5f56;        
+        box-shadow: 0px 0px 0px 0px #0d5f56;        
     }
 }
 
 @-o-keyframes testim-scale {
     0% {
-        -o-box-shadow: 0px 0px 0px 0px #eee;
-        box-shadow: 0px 0px 0px 0px #eee;
+        -o-box-shadow: 0px 0px 0px 0px #9B9B9B;
+        box-shadow: 0px 0px 0px 0px #9B9B9B;
     }
 
     35% {
-        -o-box-shadow: 0px 0px 10px 5px #eee;        
-        box-shadow: 0px 0px 10px 5px #eee;        
+        -o-box-shadow: 0px 0px 10px 5px #9B9B9B;        
+        box-shadow: 0px 0px 10px 5px #9B9B9B;        
     }
 
     70% {
-        -o-box-shadow: 0px 0px 10px 5px #ea830e;        
-        box-shadow: 0px 0px 10px 5px #ea830e;        
+        -o-box-shadow: 0px 0px 10px 5px #0d5f56;        
+        box-shadow: 0px 0px 10px 5px #0d5f56;        
     }
 
     100% {
-        -o-box-shadow: 0px 0px 0px 0px #ea830e;        
-        box-shadow: 0px 0px 0px 0px #ea830e;        
+        -o-box-shadow: 0px 0px 0px 0px #0d5f56;        
+        box-shadow: 0px 0px 0px 0px #0d5f56;        
     }
 }
 
 @keyframes testim-scale {
     0% {
-        box-shadow: 0px 0px 0px 0px #eee;
+        box-shadow: 0px 0px 0px 0px #9B9B9B;
     }
 
     35% {
-        box-shadow: 0px 0px 10px 5px #eee;        
+        box-shadow: 0px 0px 10px 5px #9B9B9B;        
     }
 
     70% {
-        box-shadow: 0px 0px 10px 5px #ea830e;        
+        box-shadow: 0px 0px 10px 5px #0d5f56;        
     }
 
     100% {
-        box-shadow: 0px 0px 0px 0px #ea830e;        
+        box-shadow: 0px 0px 0px 0px #0d5f56;        
     }
 }
 
@@ -582,5 +601,4 @@
 	.testim .cont div p {
 		line-height: 25px;
 	}
-
 }

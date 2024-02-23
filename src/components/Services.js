@@ -3,9 +3,6 @@ import React, {useEffect} from "react";
 import img1 from '../img/hiw-1.jpg'
 import img2 from '../img/hiw-2.jpg'
 import img3 from '../img/hiw-3.jpg'
-import img4 from '../img/img-600x400-4.jpg'
-import img5 from '../img/img-600x400-5.jpg'
-import img6 from '../img/img-600x400-6.jpg'
 import Aos from "aos";
 import "aos/dist/aos.css";
 function Services() {

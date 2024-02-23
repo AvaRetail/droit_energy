@@ -3,7 +3,6 @@
 import React, { useEffect,useRef  } from 'react';
  import OwlCarousel from 'react-owl-carousel'; // Import Owl Carousel component
 //import '../lib/owlcarousel/assets/owl.carousel.min.css'; // Import Owl Carousel styles
-
 import img1 from '../img/testimonial-1.jpg';
 import img2 from '../img/testimonial-2.jpg';
 import img3 from '../img/testimonial-3.jpg';

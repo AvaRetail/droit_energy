@@ -20,11 +20,11 @@ function Footer1() {
         Aos.init({ duration: 2000 });
       }, []);
   return (
-    <footer className="footer footer-section">
+    <footer className="footer footer-section" >
     <div className="footer-top">
       <div className="container">
         <div className="row">
-          <div className="col-lg-6 col-md-6 col-sm-6">
+          <div className="col-lg-6 col-md-6 col-sm-6" data-aos="fade-up" data-aos-duration="4500">
             <div className="widget company-intro-widget">
               <Link className="site-logo" to="top" style={{cursor:"pointer"}}>
                 <img src={logo} alt="logo" /></Link>
@@ -49,7 +49,7 @@ function Footer1() {
               </ul>
             </div>
           </div> */}
-          <div className="col-lg-6 col-md-6 col-sm-6">
+          <div className="col-lg-6 col-md-6 col-sm-6" data-aos="fade-down" data-aos-duration="4500">
             <div className="widget latest-news-widget">
               <ul className="small-post-list">
               {/* <h5 className="widget-title">Our Offices
