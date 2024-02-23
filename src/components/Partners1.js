@@ -37,7 +37,7 @@ const Partners1 = () => {
     <div className='container pt-3 pb-5'>
       <div id="ourclients" onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>
         
-        <div className="title mb-3 cleaner-h2 pb-2" >
+        <div className="title mb-3 cleaner-h2" >
                             <h5 className="text-primary">Our Proud Partners</h5>
                 {/* <h1 className="mb-4">Experienced Team Members</h1> */}
                         </div>
