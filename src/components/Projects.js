@@ -12,7 +12,7 @@ function Projects() {
         Aos.init({ duration: 2000 });
       }, []);
   return (
-    <div className="bg-light">
+    <div className="bg">
     <div className="container-xxl py-5">
         <div className="container">
             {/* <div className="text-center mx-auto mb-5 wow fadeInUp" data-wow-delay="0.1s" style={{"maxWidth": "600px"}}>

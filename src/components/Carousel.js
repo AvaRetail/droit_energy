@@ -22,10 +22,10 @@ function Carousel() {
     const props = useSpring({
         from: { opacity: 0, transform: 'translateX(100%)' },
         to: { opacity: 1, transform: 'translateX(0)' },
-        config: { duration: 1000 }
+        config: { duration: 500 }
       });
   return (
-    <div id="carousel" className="container-fluid p-0 pb-1 wow fadeIn" data-wow-delay="0.1s" style={props}>
+    <div id="carousel" className="container-fluid p-0 pb-1 wow fadeIn" data-wow-delay="0.1s">
     <div className="owl-carousel header-carousel position-relative">
         <div className="owl-carousel-item position-relative" data-dot="<img src={img1}>">
             {/* <img className="img-fluid" src={img2} alt="" /> */}
@@ -36,13 +36,13 @@ function Carousel() {
                 </video>
             </div>
             <div className="owl-carousel-inner">
-                <animated.div className="container" style={props}>
+                <animated.div className="container" >
                     <div className="row justify-content-start">
                         <div className="col-10 col-lg-8">
-                            <h1 className="display-2 text-white animated slideInDown">
+                            <h1 className="display-2 text-white animated slideInDown" data-aos="fade-down" data-aos-duration="4500">
                                 Powering Progress
                                 Preserving the Planet</h1>
-                            <p className="fs-5 fw-medium text-white mb-4 pb-3">Our mission is to utilize advancements in geoscience to expedite the 
+                            <p className="fs-5 fw-medium text-white mb-4 pb-3" data-aos="fade-up" data-aos-duration="5000">Our mission is to utilize advancements in geoscience to expedite the 
                             shift towards clean energy by delivering affordable and dependable geothermal power solutions. </p>
                             {/* <a href="" className="btn btn-primary rounded-pill py-3 px-5 animated slideInLeft">About Us</a> */}
                             {/* <Link

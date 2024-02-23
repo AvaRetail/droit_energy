@@ -37,7 +37,7 @@ function Navbar() {
     });
 
     return (
-        <animated.nav  className="navbar navbar-expand-lg bg-white navbar-light sticky-top p-sm-1 p-lg-2" style={props}>
+        <animated.nav  className="navbar navbar-expand-lg bg-white navbar-light sticky-top p-sm-1 p-lg-2" >
             <Link to="top" className="navbar-brand d-flex align-items-center border-end px-4 px-lg-5" style={{cursor:"pointer"}}>
                 <img src={logo} height="70px" width="185" alt="Logo"/>
             </Link>
