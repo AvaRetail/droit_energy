@@ -33,7 +33,7 @@ function Navbar() {
     const props = useSpring({
         from: { opacity: 0, transform: 'translateX(100%)' },
         to: { opacity: 1, transform: 'translateX(0)' },
-        config: { duration: 1000 }
+        config: { duration: 500 }
     });
 
     return (
