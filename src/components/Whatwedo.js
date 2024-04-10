@@ -24,8 +24,7 @@ function Whatwedo() {
           <div className="row gx-3 justify-content-center">
             <div className="col-lg-2 col-md-4">
               <div className="text-center">
-                <div className="card-body" data-aos="fade-down"
-            data-aos-duration="4500">
+                <div className="card-body">
                   <div className="whatwedo-icon">  
                   <i className="fas fa-search-location fa-6x mb-3"></i>
                   </div>
@@ -35,8 +34,7 @@ function Whatwedo() {
             </div>
             <div className="col-lg-2 col-md-4">
               <div className=" text-center">
-                <div className="card-body" data-aos="fade-up"
-            data-aos-duration="4500">
+                <div className="card-body">
                 <div className="whatwedo-icon">  
                   <i className="fas fa-globe-asia fa-6x mb-3"></i>
                   </div>
@@ -44,8 +42,7 @@ function Whatwedo() {
                 </div>
               </div>
             </div>
-            <div className="col-lg-2 col-md-4" data-aos="fade-down"
-            data-aos-duration="4500">
+            <div className="col-lg-2 col-md-4">
               <div className="text-center">
                 <div className="card-body">
                 <div className="whatwedo-icon">  
@@ -55,8 +52,7 @@ function Whatwedo() {
                 </div>
               </div>
             </div>
-            <div className="col-lg-2 col-md-4" data-aos="fade-up"
-            data-aos-duration="4500">
+            <div className="col-lg-2 col-md-4">
               <div className="text-center">
                 <div className="card-body">
                 <div className="whatwedo-icon">  
@@ -66,8 +62,7 @@ function Whatwedo() {
                 </div>
               </div>
             </div>
-            <div className="col-lg-2 col-md-4" data-aos="fade-down"
-            data-aos-duration="4500">
+            <div className="col-lg-2 col-md-4">
               <div className="text-center">
                 <div className="card-body">
                 <div className="whatwedo-icon">  

@@ -1,14 +1,8 @@
 
 
 import React, {useEffect} from "react";
-import img1 from '../img/gallery-1.jpg'
-import img2 from '../img/gallery-2.jpg'
-import img3 from '../img/gallery-3.jpg'
-import img4 from '../img/gallery-4.jpg'
-import img5 from '../img/gallery-5.jpg'
-import img6 from '../img/gallery-6.jpg'
-import logo from '../img/logofooter1.png'
-// import logo from '../img/1.png'
+import logo from '../img/logofooter.png'
+
 import { Link } from "react-scroll";
 
 
@@ -82,7 +76,7 @@ function Footer() {
               </Link>
               <Link
                 className="btn btn-link"
-                to="featurewhy"
+                to="howsection"
                 spy={true}
                 smooth={true}
                 duration={50}

@@ -7,15 +7,16 @@ import { useSpring, animated } from 'react-spring';
 
 function Top() {
 // Define animation properties using useSpring hook
-const props = useSpring({
-    from: { opacity: 0, transform: 'translateX(100%)' },
-    to: { opacity: 1, transform: 'translateX(0)' },
-    config: { duration: 1000 }
-  });
+// const props = useSpring({
+//     from: { opacity: 0, transform: 'translateX(100%)' },
+//     to: { opacity: 1, transform: 'translateX(0)' },
+//     config: { duration: 1000 }
+//   });
   
   
   return (
-    <animated.div id="top" className="container-fluid bg-dark p-0" style={props}>
+    // <animated.div id="top" className="container-fluid bg-dark p-0" style={props}>
+    <animated.div id="top" className="container-fluid bg-dark p-0">
     <div className="row gx-0 d-none d-lg-flex">
         <div className="col-lg-7 px-5 text-start">
             <div className="h-100 d-inline-flex align-items-center me-4">
@@ -44,7 +45,7 @@ const props = useSpring({
                 <a className="btn btn-square btn-link rounded-0 border-0 border-end border-secondary text-white" href=""><i className="fab fa-facebook-f"></i></a>
                 <a className="btn btn-square btn-link rounded-0 border-0 border-end border-secondary text-white" href=""><i className="fab fa-twitter"></i></a>
                 <a className="btn btn-square btn-link rounded-0 border-0 border-end border-secondary text-white" href=""><i className="fab fa-linkedin-in"></i></a>
-                <a className="btn btn-square btn-link rounded-0 border-0 text-white" href="" ><i className="fab fa-instagram"></i></a>
+                <a className="btn btn-square btn-link rounded-0 border-0 text-white" href="" ><i className="fab fa-youtube"></i></a>
             </div>
         </div>
     </div>

@@ -3,7 +3,7 @@ import React, { useEffect, useState } from "react";
 // import "aos/dist/aos.css";
 import logo from "../img/Logo-Green.png";
 import { Link } from "react-scroll";
-import { useSpring, animated } from 'react-spring';
+import { animated } from 'react-spring';
 
 function Navbar() {
     
@@ -30,11 +30,11 @@ function Navbar() {
         setIsDropdownOpen(false);
     };
 
-    const props = useSpring({
-        from: { opacity: 0, transform: 'translateX(100%)' },
-        to: { opacity: 1, transform: 'translateX(0)' },
-        config: { duration: 500 }
-    });
+    // const props = useSpring({
+    //     from: { opacity: 0, transform: 'translateX(100%)' },
+    //     to: { opacity: 1, transform: 'translateX(0)' },
+    //     config: { duration: 500 }
+    // });
 
     return (
         <animated.nav  className="navbar navbar-expand-lg bg-white navbar-light sticky-top p-sm-1 p-lg-2" >
@@ -79,7 +79,7 @@ function Navbar() {
                             <li>
                                 <Link
                                     className="dropdown-item"
-                                    to="featurewhy"
+                                    to="howsection"
                                     spy={true}
                                     smooth={true}
                                     duration={500}
@@ -115,7 +115,7 @@ function Navbar() {
                     >
                         Why Us
                     </Link>
-                    <Link
+                    {/* <Link
                         className="nav-item nav-link"
                         to="team"
                         spy={true}
@@ -125,7 +125,7 @@ function Navbar() {
                         onClick={closeDropdown} // Close menu on click
                     >
                         Our Team
-                    </Link>
+                    </Link> */}
                 </div>
                 <Link
                     className="btn btn-primary rounded-1 py-4 px-lg-5 d-none d-lg-block"

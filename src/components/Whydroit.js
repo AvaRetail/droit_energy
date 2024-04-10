@@ -1,5 +1,9 @@
 import React, { useEffect } from "react";
-import about from "../img/ao-3.jpg";
+import img1 from "../img/whydroitenergy_1.webp";
+import img2 from "../img/Engineer.png";
+import img3 from "../img/Experience.png";
+import img4 from "../img/Vector.png";
+import img5 from "../img/law.png";
 import Aos from "aos";
 import "aos/dist/aos.css";
 
@@ -7,14 +11,14 @@ function Whydroit() {
   useEffect(() => {
     Aos.init({ duration: 2000 });
   }, []);
+  
 
   return (
     
     <div
       id="whydroit"
       className="container-fluid bg-light overflow-hidden my-3 px-lg-2 p-2"
-      data-aos="fade-down"
-      data-aos-duration="4500"
+      
     >
       <div className="container about px-lg-0">
         <div className="row g-0 mx-lg-0 align-items-center">
@@ -24,12 +28,11 @@ function Whydroit() {
           >
             <div
               className="position-relative h-100"
-              data-aos="fade-up"
-              data-aos-duration="4500"
+             
             >
               <img
                 className="img-fluid w-100 h-100 d-none d-lg-block"
-                src="https://droit.energy/wp-content/uploads/2024/02/pexels-pok-rie-157827-1.jpg"
+                src={img1}
                 style={{ objectFit: "cover" }}
                 alt=""
               />
@@ -38,8 +41,7 @@ function Whydroit() {
           <div
             className="col-lg-6 about-text py-2 wow fadeIn"
             data-wow-delay="0.5s"
-            data-aos="fade-down"
-            data-aos-duration="4500"
+           
           >
             <div className="p-lg-5 pe-lg-5">
               {/* <h6 className="text-primary">Why Droit Energy</h6> */}
@@ -52,7 +54,7 @@ function Whydroit() {
               <div className="row">
                 <div className="col-md-2 col-4">
                   <img
-                    src="https://droit.energy/wp-content/uploads/2024/02/Engineer.png"
+                    src={img2}
                     className="why-droit-icon"
                     alt="Engineer"
                   />
@@ -68,7 +70,7 @@ function Whydroit() {
               <div className="row">
                 <div className="col-md-2 col-4 pe-lg-10">
                   <img
-                    src="https://droit.energy/wp-content/uploads/2024/02/Experience.png"
+                    src={img3}
                     className="why-droit-icon"
                     alt="Experience"
                   />
@@ -84,7 +86,7 @@ function Whydroit() {
               <div className="row">
                 <div className="col-md-2 col-4">
                   <img
-                    src="https://droit.energy/wp-content/uploads/2024/02/Vector.png"
+                    src={img4}
                     className="why-droit-icon"
                     alt="Adjacent Technologies"
                   />
@@ -100,7 +102,7 @@ function Whydroit() {
               <div className="row">
                 <div className="col-md-2 col-4">
                   <img
-                    src="https://droit.energy/wp-content/uploads/2024/02/law.png"
+                    src={img5}
                     className="why-droit-icon"
                     alt="Compliance"
                   />

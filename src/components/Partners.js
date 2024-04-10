@@ -1,96 +1,77 @@
-import React,{useEffect} from 'react';
-import Slider from 'react-slick';
-import 'slick-carousel/slick/slick.css';
-import 'slick-carousel/slick/slick-theme.css';
-import Aos from "aos";
-import "aos/dist/aos.css";
-// Import your sponsor images
-import sponsor1 from '../img/news1.png'
-import sponsor2 from '../img/news2.png'
-import sponsor3 from '../img/news3.png'
-// Add more sponsors as needed
+import React, { useEffect, useState } from 'react';
+import img1 from '../img/CAG Logo.png'
+import img2 from '../img/Kelloggs Logo.png'
+import img3 from '../img/IntelLogo.png'
+import img4 from '../img/Wallmart Logo.png'
+import img5 from '../img/PnG Logo.png'
+import img6 from '../img/LIDILogo1.png'
 
 const Partners = () => {
+  const [rotating, setRotating] = useState(true);
 
   useEffect(() => {
-    Aos.init({ duration: 2000 });
-  }, []);
+    const clientspeed = 1800;
+    const seeclients = setInterval(rotateClients, clientspeed);
 
-  const settings = {
-    dots: true,
-    infinite: true,
-    speed: 500,
-    slidesToShow: 3,
-    slidesToScroll: 1,
-    autoplay: true,
-    autoplaySpeed: 2000,
-    responsive: [
-      {
-        breakpoint: 1024,
-        settings: {
-          slidesToShow: 3,
-          slidesToScroll: 1,
-          infinite: true,
-          dots: true
-        }
-      },
-      {
-        breakpoint: 768,
-        settings: {
-          slidesToShow: 2,
-          slidesToScroll: 1
-        }
-      },
-      {
-        breakpoint: 480,
-        settings: {
-          slidesToShow: 1,
-          slidesToScroll: 1
-        }
-      }
-    ]
+    function rotateClients() {
+      if (!rotating) return;
+
+      const $clientlogo = document.getElementById('clientlogo');
+      const $first = $clientlogo.querySelector('li:first-child');
+
+      $first.style.transition = 'margin-left 2s ease-in-out'; // Add CSS transition
+      $first.style.marginLeft = '-220px';
+
+      setTimeout(() => {
+        $clientlogo.appendChild($first); // Move the first image to the end
+        $first.style.marginLeft = '0px'; // Reset margin
+      }, 2000);
+    }
+
+    return () => clearInterval(seeclients);
+  }, [rotating]);
+
+  const handleMouseEnter = () => {
+    setRotating(false);
+  };
+
+  const handleMouseLeave = () => {
+    setRotating(true);
   };
 
   return (
-    <>
-    <div className=''>
-    <div className='container' >
-    <div className="sponsor-slider pt-3 pb-5" data-aos="fade-up" data-aos-duration="4500">
-      <div className="title mb-3 cleaner-h2 pt-5" >
+    <div className='container pt-3 pb-5'>
+      <div id="ourclients" onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>
+        
+        <div className="title mb-3 cleaner-h2" >
                             <h5 className="text-primary">Our Proud Partners</h5>
                 {/* <h1 className="mb-4">Experienced Team Members</h1> */}
                         </div>
-      <Slider {...settings} className='pt-5' >
-        <div > 
-          <img src="https://droit.energy/wp-content/uploads/2017/10/testimonial-logo-1-300x284.png" alt="Sponsor 1" />
+        <div className="clients-wrap pt-3">
+          <ul id="clientlogo" className="clearfix">
+            <li>
+              <img src={img1} alt="Logo" />
+            </li>
+            <li>
+              <img src={img2} alt="Logo"/>
+            </li>
+            <li>
+              <img src={img3} alt="Logo"/>
+            </li>
+            <li>
+              <img src={img4} alt="Logo"/>
+            </li>
+            <li>
+              <img src={img5} alt="Logo"/>
+            </li>
+            <li>
+              <img src={img6} alt="Logo"/>
+            </li>
+            
+          </ul>
         </div>
-        <div>
-          <img src="https://droit.energy/wp-content/uploads/2017/10/testimonial-logo-2-150x150.png" alt="Sponsor 2" />
-        </div>
-        <div>
-          <img src="https://droit.energy/wp-content/uploads/2017/11/depositphotos_43436725-stock-illustration-icon-design-element-13.png" alt="Sponsor 3" />
-        </div>
-        
-        <div>
-          <img src="https://droit.energy/wp-content/uploads/2017/11/depositphotos_43436725-stock-illustration-icon-design-element-15.png" alt="Sponsor 4" />
-        </div>
-        <div>
-          <img src="https://droit.energy/wp-content/uploads/2017/11/depositphotos_43436725-stock-illustration-icon-design-element-16.png" alt="Sponsor 5" />
-        </div>
-        <div>
-          <img src="https://droit.energy/wp-content/uploads/2017/11/depositphotos_43436725-stock-illustration-icon-design-element-17.png" alt="Sponsor 6" />
-        </div>
-
-        <div>
-          <img src="https://droit.energy/wp-content/uploads/2017/11/depositphotos_43436725-stock-illustration-icon-design-element-14-1.png" alt="Sponsor 7" />
-        </div>
-
-        {/* Add more sponsors here */}
-      </Slider>
+      </div>
     </div>
-    </div>
-    </div>
-    </>
   );
 };
 

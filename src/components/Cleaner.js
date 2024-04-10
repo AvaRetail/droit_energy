@@ -1,5 +1,4 @@
 import React, { useEffect } from "react";
-import about from "../img/about-us.png";
 import Aos from "aos";
 import "aos/dist/aos.css";
 import { Link } from "react-scroll";
@@ -11,7 +10,7 @@ function Cleaner() {
   return (
     <div className="bg-light p-2">
     <div className="container overflow-hidden my-3 px-lg-2">
-      <div className="container about px-lg-0" data-aos="fade-up" data-aos-duration="4500">
+      <div className="container about px-lg-0">
         {/* <h6 className="text-primary cleaner-h2 p-3">
           Let’s Make the Planet Cleaner!
         </h6> */}
@@ -28,8 +27,7 @@ function Cleaner() {
       </div>
       <div
         className="button-container"
-        data-aos="fade-down"
-        data-aos-duration="4500"
+        
       >
         <Link
           className="btn btn-primary rounded-pill py-3 px-5 

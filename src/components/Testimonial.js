@@ -1,90 +1,159 @@
-// import '../lib/owlcarousel/owl.carousel.min.js';
-//  import '../lib/owlcarousel/assets/owl.carousel.min.css'
-import React, { useEffect,useRef  } from 'react';
- import OwlCarousel from 'react-owl-carousel'; // Import Owl Carousel component
-//import '../lib/owlcarousel/assets/owl.carousel.min.css'; // Import Owl Carousel styles
+import React, { useEffect, useRef } from 'react';
 import img1 from '../img/testimonial-1.jpg';
 import img2 from '../img/testimonial-2.jpg';
 import img3 from '../img/testimonial-3.jpg';
-//  import $ from 'jquery';
+import Aos from "aos";
+import "aos/dist/aos.css";
 
 function Testimonial() {
-    const owlCarouselRef = useRef(null);
     useEffect(() => {
-        // Access Owl Carousel instance using the ref
-        if (owlCarouselRef.current) {
-            owlCarouselRef.current.owlCarousel({
-                autoplay: true,
-                smartSpeed: 1000,
-                center: true,
-                dots: false,
-                loop: true,
-                nav: true,
-                navText: [
-                    '<i class="bi bi-arrow-left"></i>',
-                    '<i class="bi bi-arrow-right"></i>'
-                ],
-                responsive: {
-                    0: {
-                        items: 1
-                    },
-                    768: {
-                        items: 2
-                    }
-                }
-            });
+        Aos.init({ duration: 2000 });
+      }, []);
+    useEffect(() => {
+        const testim = document.getElementById("testim");
+        const testimDots = Array.prototype.slice.call(document.getElementById("testim-dots").children);
+        const testimContent = Array.prototype.slice.call(document.getElementById("testim-content").children);
+        const testimLeftArrow = document.getElementById("left-arrow");
+        const testimRightArrow = document.getElementById("right-arrow");
+        const testimSpeed = 4500;
+        let currentSlide = 0;
+        let currentActive = 0;
+        let testimTimer;
+        let touchStartPos;
+        let touchEndPos;
+        let touchPosDiff;
+        const ignoreTouch = 30;
+
+        function playSlide(slide) {
+            for (let k = 0; k < testimDots.length; k++) {
+                testimContent[k].classList.remove("active");
+                testimContent[k].classList.remove("inactive");
+                testimDots[k].classList.remove("active");
+            }
+
+            if (slide < 0) {
+                slide = currentSlide = testimContent.length - 1;
+            }
+
+            if (slide > testimContent.length - 1) {
+                slide = currentSlide = 0;
+            }
+
+            if (currentActive !== currentSlide) {
+                testimContent[currentActive].classList.add("inactive");
+            }
+            testimContent[slide].classList.add("active");
+            testimDots[slide].classList.add("active");
+
+            currentActive = currentSlide;
+
+            clearTimeout(testimTimer);
+            testimTimer = setTimeout(function () {
+                playSlide(currentSlide += 1);
+            }, testimSpeed)
         }
-    }, []);
+
+        testimLeftArrow.addEventListener("click", function () {
+            playSlide(currentSlide -= 1);
+        })
+
+        testimRightArrow.addEventListener("click", function () {
+            playSlide(currentSlide += 1);
+        })
+
+        for (let l = 0; l < testimDots.length; l++) {
+            testimDots[l].addEventListener("click", function () {
+                playSlide(currentSlide = testimDots.indexOf(this));
+            })
+        }
+
+        playSlide(currentSlide);
+
+        document.addEventListener("keyup", function (e) {
+            switch (e.keyCode) {
+                case 37:
+                    testimLeftArrow.click();
+                    break;
+
+                case 39:
+                    testimRightArrow.click();
+                    break;
+
+                default:
+                    break;
+            }
+        })
+
+        testim.addEventListener("touchstart", function (e) {
+            touchStartPos = e.changedTouches[0].clientX;
+        })
+
+        testim.addEventListener("touchend", function (e) {
+            touchEndPos = e.changedTouches[0].clientX;
+
+            touchPosDiff = touchStartPos - touchEndPos;
+
+            if (touchPosDiff > 0 + ignoreTouch) {
+                testimLeftArrow.click();
+            } else if (touchPosDiff < 0 - ignoreTouch) {
+                testimRightArrow.click();
+            } else {
+                return;
+            }
+
+        })
+    }, []); // empty dependency array means this effect will run only once after initial render
+
     return (
-        <div className="container-xxl py-5">
-        <div className="container">
-            <div className="text-center mx-auto mb-5 wow fadeInUp" data-wow-delay="0.1s" style={{maxWidth: "600px"}}>
-                <h6 className="text-primary">Testimonial</h6>
+        <div>
+        <section id="testim" className="testim">
+            {/* <div className="text-center mx-auto mb-5 wow fadeInUp" data-wow-delay="0.1s" style={{maxWidth: "600px"}}>
+                <h5 className="text-primary">Testimonial</h5>
                 <h1 className="mb-4">What Our Clients Say!</h1>
+            </div> */}
+            <div className="title mb-3 cleaner-h2">
+                            <h5 className="text-primary">Testimonials</h5>
+                        </div>
+            <div className="wrap">
+                <span id="right-arrow" className="arrow right fa fa-chevron-right"></span>
+                <span id="left-arrow" className="arrow left fa fa-chevron-left "></span>
+                <ul id="testim-dots" className="dots">
+                    <li className="dot active"></li>
+                    <li className="dot"></li>
+                    <li className="dot"></li>
+                    <li className="dot"></li>
+                    <li className="dot"></li>
+                </ul>
+                <div id="testim-content" className="cont">
+                    <div className="active">
+                        <div className="img"><img src={img1} alt="" /></div>
+                        <h2>Lorem P. Ipsum</h2>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.</p>
+                    </div>
+                    <div>
+                        <div className="img"><img src={img2} alt="" /></div>
+                        <h2>Mr. Lorem Ipsum</h2>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.</p>
+                    </div>
+                    <div>
+                        <div className="img"><img src={img3} alt="" /></div>
+                        <h2>Lorem Ipsum</h2>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.</p>
+                    </div>
+                    <div>
+                        <div className="img"><img src={img1} alt="" /></div>
+                        <h2>Lorem De Ipsum</h2>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.</p>
+                    </div>
+                    <div>
+                        <div className="img"><img src={img2} alt="" /></div>
+                        <h2>Ms. Lorem R. Ipsum</h2>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.</p>
+                    </div>
+                </div>
             </div>
-            <div className="owl-carousel testimonial-carousel wow fadeInUp" data-wow-delay="0.1s">
-                <div className="testimonial-item text-center">
-                    <div className="testimonial-img position-relative">
-                        <img className="img-fluid rounded-circle mx-auto mb-5" src="img/testimonial-1.jpg" />
-                        <div className="btn-square bg-primary rounded-circle">
-                            <i className="fa fa-quote-left text-white"></i>
-                        </div>
-                    </div>
-                    <div className="testimonial-text text-center rounded p-4">
-                        <p>Clita clita tempor justo dolor ipsum amet kasd amet duo justo duo duo labore sed sed. Magna ut diam sit et amet stet eos sed clita erat magna elitr erat sit sit erat at rebum justo sea clita.</p>
-                        <h5 className="mb-1">Client Name</h5>
-                        <span className="fst-italic">Profession</span>
-                    </div>
-                </div>
-                <div className="testimonial-item text-center">
-                    <div className="testimonial-img position-relative">
-                        <img className="img-fluid rounded-circle mx-auto mb-5" src="img/testimonial-2.jpg" />
-                        <div className="btn-square bg-primary rounded-circle">
-                            <i className="fa fa-quote-left text-white"></i>
-                        </div>
-                    </div>
-                    <div className="testimonial-text text-center rounded p-4">
-                        <p>Clita clita tempor justo dolor ipsum amet kasd amet duo justo duo duo labore sed sed. Magna ut diam sit et amet stet eos sed clita erat magna elitr erat sit sit erat at rebum justo sea clita.</p>
-                        <h5 className="mb-1">Client Name</h5>
-                        <span className="fst-italic">Profession</span>
-                    </div>
-                </div>
-                <div className="testimonial-item text-center">
-                    <div className="testimonial-img position-relative">
-                        <img className="img-fluid rounded-circle mx-auto mb-5" src="img/testimonial-3.jpg" />
-                        <div className="btn-square bg-primary rounded-circle">
-                            <i className="fa fa-quote-left text-white"></i>
-                        </div>
-                    </div>
-                    <div className="testimonial-text text-center rounded p-4">
-                        <p>Clita clita tempor justo dolor ipsum amet kasd amet duo justo duo duo labore sed sed. Magna ut diam sit et amet stet eos sed clita erat magna elitr erat sit sit erat at rebum justo sea clita.</p>
-                        <h5 className="mb-1">Client Name</h5>
-                        <span className="fst-italic">Profession</span>
-                    </div>
-                </div>
-            </div>
+        </section>
         </div>
-    </div>
     );
 }
 

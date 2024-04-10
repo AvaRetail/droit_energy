@@ -4,18 +4,17 @@ import React, {useEffect} from "react";
 import img1 from '../img/AtulHirpara.jpg'
 import img2 from '../img/team-1.jpg'
 import img3 from '../img/team-3.jpg'
-import img6 from '../img/bhavesh.png'
 // import './Navbar.css';
 import Aos from "aos";
 import "aos/dist/aos.css";
 function Team() {
-    useEffect(() => {
-        Aos.init({ duration: 2000 });
-      }, []);
+    // useEffect(() => {
+    //     Aos.init({ duration: 2000 });
+    //   }, []);
   return (
     <div className="bg-light">
     <div id="team" className="container-xxl py-2">
-        <div className="container"  data-aos="fade-up" data-aos-duration="4500">
+        <div className="container">
             {/* <div className=" text-center mx-auto mb-5 wow fadeInUp" data-wow-delay="0.1s" style={{"maxWidth": "600px"}}>
                 <h5 className="text-primary">Team Member</h5>
             </div> */}
@@ -24,7 +23,7 @@ function Team() {
                 {/* <h1 className="mb-4">Experienced Team Members</h1> */}
                         </div>
             <div className="row g-4 pt-5">
-                <div className="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s"  data-aos="fade-down" data-aos-duration="4500">
+                <div className="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
                     <div className="team-item rounded overflow-hidden">
                         <div className="d-flex">
                             <img className="img-fluid w-75" src={img1} alt="" />
@@ -58,7 +57,7 @@ function Team() {
                         </div>
                     </div>
                 </div>
-                <div className="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.5s"  data-aos="fade-up" data-aos-duration="4500">
+                <div className="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
                     <div className="team-item rounded overflow-hidden">
                         <div className="d-flex">
                             <img className="img-fluid w-75" src={img3} alt="" />

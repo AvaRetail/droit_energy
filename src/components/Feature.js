@@ -1,8 +1,6 @@
 
 import React, {useEffect} from "react";
-import img1 from '../img/l1.jpg'
-import img2 from '../img/l2.jpg'
-import img3 from '../img/l3.jpg'
+
 
 // import { Link } from "react-scroll";
 // import './Navbar.css';

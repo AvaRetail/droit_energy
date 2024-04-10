@@ -1,27 +1,24 @@
 import React, { useState, useEffect } from 'react';
-import Navbar from './components/Navbar';
 import Top from './components/Top';
+import Navbar from './components/Navbar';
 import Carousel from './components/Carousel';
-import Feature from './components/Feature';
 import About from './components/About';
-import Services from './components/Services';
-import Featurewhy from './components/Featurewhy';
-import Projects from './components/Projects';
-import Quote from './components/Quote';
-import Team from './components/Team';
-import Testimonial from './components/Testimonial';
-import Footer from './components/Footer';
-import { animateScroll as scroll } from 'react-scroll'; // Import animateScroll from react-scroll
-import Whydroit from './components/Whydroit';
+import How from './components/How';
+import Whygeothermal from './components/Whygeothermal';
 import Cleaner from './components/Cleaner';
 import Mission from './components/Mission';
+import Whydroit from './components/Whydroit';
 import Whatwedo from './components/Whatwedo';
-import './App.css';
-import Footer1 from './components/Footer1';
-import Testimonial1 from './components/Testimonial1';
+import Team from './components/Team';
+import Testimonial from './components/Testimonial';
+import News from './components/News';
 import Partners from './components/Partners';
-import Blog from './components/Blog';
-import Partners1 from './components/Partners1';
+import Quote from './components/Quote';
+import Footer1 from './components/Footer1';
+
+import { animateScroll as scroll } from 'react-scroll'; // Import animateScroll from react-scroll
+import './App.css';
+import Feature from './components/Feature';
 
 function App() {
   const [showArrow, setShowArrow] = useState(false);
@@ -54,25 +51,24 @@ function App() {
        {/* <Top /> */}
       <Navbar />
       <Carousel />
-      {/* <Feature /> */}
+      
       <About />
-      <Featurewhy />
-      <Services />
+      <How />
+      
+      <Whygeothermal />
       <Cleaner />
       <Mission />
 
       <Whydroit />
       <Whatwedo />
-      <Team />
-      <Testimonial1 />
-      {/* <Blog /> */}
-      {/* <Partners /> */}
-      <Projects />
-      {/* <Partners /> */}
-<Partners1 />
-      <Quote />
       
-      {/* <Testimonial /> */}
+      {/* <Team />
+      <Testimonial /> */}
+      
+      {/* <News />
+      <Partners /> */}
+      
+      <Quote />
       {/* <Footer /> */}
       <Footer1 />
       {/* Back to Top Button */}

@@ -1,5 +1,4 @@
 import React, { useEffect } from "react";
-import about from '../img/about-us.png'
 import Aos from "aos";
 import "aos/dist/aos.css";
 import { Link } from "react-scroll";
@@ -10,17 +9,17 @@ function About() {
     }, []);
 
     return (
-            <div className="container overflow-hidden my-2 px-lg-2" data-aos="fade-down" data-aos-duration="4500">
+            <div className="container overflow-hidden my-2 px-lg-2">
                 <div className="container about px-lg-0">
                     <div className="row g-0 mx-lg-0">
                         {/* Order 1 in desktop, 2 in mobile */}
-                        <div className="col-lg-6 pe-lg-0 p-4 wow fadeIn order-lg-1 order-2" data-wow-delay="0.5s" style={{ minHeight: "300px" }} data-aos="fade-up" data-aos-duration="4500">
+                        <div className="col-lg-6 pe-lg-0 p-4 wow fadeIn order-lg-1 order-2" style={{ minHeight: "300px" }} >
                             <div className="position-relative h-100">
                                 <iframe className="img-fluid w-100 h-100" style={{ objectFit: "cover" }} src="https://www.youtube.com/embed/iBrSU22d0sI?si=F9kErI3FThJhgopb" title="Droit Energy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"></iframe>
                             </div>
                         </div>
                         {/* Order 2 in desktop, 1 in mobile */}
-                        <div className="col-lg-6 about-text py-1 wow fadeIn order-lg-2 order-1" data-wow-delay="0.5s" data-aos="fade-down" data-aos-duration="4500">
+                        <div className="col-lg-6 about-text py-1 wow fadeIn order-lg-2 order-1" >
                             <div className="p-lg-5 pe-lg-0">
                                 <div className="title mb-3" >
                                     <h5 className="text-primary">What’s Geothermal Energy</h5>
@@ -30,7 +29,7 @@ function About() {
                                 {/* Show button only on desktop */}
                                 <Link
                                     className="btn btn-primary rounded-pill py-3 px-5 mt-3 d-lg-inline-block d-none"
-                                    to="featurewhy"
+                                    to="howsection"
                                     spy={true}
                                     smooth={true}
                                     duration={500}
@@ -42,7 +41,7 @@ function About() {
                             {/* Show button only on mobile */}
                             <Link
                                 className="btn btn-primary rounded-pill py-3 px-5 mt-3 d-none"
-                                to="featurewhy"
+                                to="howsection"
                                 spy={true}
                                 smooth={true}
                                 duration={500}
